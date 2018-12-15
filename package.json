@@ -1,0 +1,23 @@
+{
+  "name": "jovellanos",
+  "version": "1.0.0",
+  "description": "Asyncronous task engine.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notaphplover/jovellanos.git"
+  },
+  "author": "Roberto Pintos López.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/notaphplover/jovellanos/issues"
+  },
+  "homepage": "https://github.com/notaphplover/jovellanos#readme",
+  "devDependencies": {
+    "@types/node": "^10.12.15",
+    "typescript": "^3.2.2"
+  }
+}
