@@ -1,4 +1,6 @@
 # Visual studio code
 /.vscode
 
+/dist
+
 /node_modules
