@@ -147,8 +147,10 @@ function bundleTest() {
         .pipe(source(path.join(OPTIONS[TASKS.BUNDLE_TEST].DESTINATION_FOLDER, OPTIONS[TASKS.BUNDLE_TEST].BUNDLE_NAME)))
         .pipe(buffer())
         // Gulp Plugins Here
-        .pipe(sourcemaps.init({loadMaps: true}))
-        .pipe(sourcemaps.write('./'))
+        .pipe(sourcemaps.init({debug: true, loadMaps: true}))
+        .pipe(sourcemaps.write('./', {
+            sourceRoot: '..',
+        }))
         .pipe(gulp.dest('./'));
 }
 
