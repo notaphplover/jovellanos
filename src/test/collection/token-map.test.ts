@@ -8,7 +8,9 @@ export class TokenMapTests implements ITest {
             this.itMustBeInitializable();
             this.itMustBeAbleToAddElements();
             this.itMustBeAbleToAddAndRemoveElements();
+            this.itMustBeAbleToIterateOverElements();
             this.itMustBeAbleToReuseUnusedIndexes();
+            this.itMustNotBeAbleToRemoveUnusedIndexes();
         });
     }
 
@@ -58,6 +60,25 @@ export class TokenMapTests implements ITest {
         });
     }
 
+    private itMustBeAbleToIterateOverElements() {
+        it('mustBeAbleToIterateOverElements', () => {
+            const map = new TokenMap<number>();
+            const elementsToAdd = 8;
+            for (var i = 0; i < elementsToAdd; ++i) {
+                const power = Math.pow(2, i);
+                map.add(power);
+            }
+
+            let sum = 0;
+            map.foreach((value, key) => {
+                sum = sum + value;
+            });
+
+            const expectedValue = Math.pow(2, elementsToAdd) - 1;
+            expect(sum).toBe(expectedValue);
+        });
+    }
+
     private itMustBeAbleToReuseUnusedIndexes(): void {
         it('mustBeAbleToReuseUnusedIndexes', () => {
             const map = new TokenMap<{}>();
@@ -80,6 +101,13 @@ export class TokenMapTests implements ITest {
             }
 
             expect(map.count()).toBe(elementsToAdd);
+        });
+    }
+
+    private itMustNotBeAbleToRemoveUnusedIndexes(): void {
+        it('mustNotBeAbleToRemoveUnusedIndexes', () => {
+            const map = new TokenMap<{}>();
+            expect(map.remove(0)).toBe(false);
         });
     }
 }
