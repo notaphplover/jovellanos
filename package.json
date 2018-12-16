@@ -4,7 +4,7 @@
   "description": "Asyncronous task engine.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/nyc/bin/nyc.js --reporter=html node ./node_modules/jasmine/bin/jasmine.js ./dist/js/bundle.test.js"
   },
   "repository": {
     "type": "git",
@@ -20,16 +20,20 @@
     "@babel/core": "^7.2.2",
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.2.0",
+    "@babel/register": "^7.0.0",
     "@babel/runtime": "^7.2.0",
     "@types/jasmine": "^3.3.2",
     "@types/node": "^10.12.15",
+    "babel-plugin-istanbul": "^5.1.0",
     "babelify": "^10.0.0",
     "browserify": "^16.2.3",
     "gulp": "^4.0.0",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-typescript": "^5.0.0",
     "gulp-uglify": "^3.0.1",
+    "jasmine": "^3.3.1",
     "jasmine-core": "^3.3.0",
+    "nyc": "^13.1.0",
     "tslint": "^5.11.0",
     "typescript": "^3.2.2",
     "vinyl-buffer": "^1.0.1",
