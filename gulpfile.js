@@ -1,5 +1,6 @@
 const browserify = require('browserify');
 const buffer = require('vinyl-buffer');
+const execSync = require('child_process').execSync;
 const gulp = require('gulp');
 const path = require('path');
 const source = require('vinyl-source-stream');
@@ -173,3 +174,18 @@ gulp.task(
 );
 
 //#endregion
+
+gulp.task(
+    TASKS.TEST,
+    gulp.series(
+        TASKS.BUILD,
+        async function() {
+            return execSync(
+                'npm test',
+                {
+                    cwd: __dirname,
+                },
+            );
+        }
+    )
+)
