@@ -1,0 +1,8 @@
+{
+    "require": [
+        "@babel/register"
+    ],
+    "sourceMap": true,
+    "instrument": false,
+    "cache": false
+}

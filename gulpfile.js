@@ -25,6 +25,29 @@ const BABEL_OPTIONS = {
     sourceMaps: true,
 };
 
+const BABEL_OPTIONS_TEST = {
+    env: {
+        test: {
+            plugins: [ 'istanbul' ],
+        }
+    },
+    plugins: [
+        '@babel/transform-runtime',
+    ],
+    presets: [
+        ['@babel/preset-env', {
+            targets: {
+                browsers: [
+                    'ie >= 11',
+                    'last 2 versions',
+                    'safari >= 11',
+                ],
+            },
+        }]
+    ],
+    sourceMaps: true,
+};
+
 const TASKS = {
     BUILD: 'build',
     BUNDLE_DEV: 'bundle-dev',
@@ -85,8 +108,10 @@ function bundleDev() {
         .pipe(source(path.join(OPTIONS[TASKS.BUNDLE_DEV].DESTINATION_FOLDER, OPTIONS[TASKS.BUNDLE_DEV].BUNDLE_NAME)))
         .pipe(buffer())
         // Gulp Plugins Here
-        .pipe(sourcemaps.init({loadMaps: true}))
-        .pipe(sourcemaps.write('./'))
+        .pipe(sourcemaps.init({debug: true, loadMaps: true}))
+        .pipe(sourcemaps.write('./', {
+            sourceRoot: '..',
+        }))
         .pipe(gulp.dest('./'));
 }
 
@@ -109,7 +134,7 @@ function bundleProd() {
 }
 
 function bundleTest() {
-    process.env.NODE_ENV = 'production';
+    process.env.NODE_ENV = 'test';
 
     return browserify(
     {
@@ -117,7 +142,7 @@ function bundleTest() {
         debug: true,
         standalone: OPTIONS[TASKS.BUNDLE_TEST].MODULE_NAME,
     })
-        .transform('babelify', BABEL_OPTIONS)
+        .transform('babelify', BABEL_OPTIONS_TEST)
         .bundle()
         .pipe(source(path.join(OPTIONS[TASKS.BUNDLE_TEST].DESTINATION_FOLDER, OPTIONS[TASKS.BUNDLE_TEST].BUNDLE_NAME)))
         .pipe(buffer())
@@ -130,7 +155,7 @@ function bundleTest() {
 gulp.task(TASKS.COMPILE_TYPESCRIPT_SRC, function () {
     var tsProjectSrc = ts.createProject(OPTIONS[TASKS.COMPILE_TYPESCRIPT_SRC].CONFIG_FILE, { noResolve: true });
     var tsResult = tsProjectSrc.src().pipe(sourcemaps.init()).pipe(tsProjectSrc());
-    return tsResult.js.pipe(sourcemaps.write('', { debug: false, includeContent: true, sourceRoot: '' })).pipe(gulp.dest(OPTIONS[TASKS.COMPILE_TYPESCRIPT_SRC].TEMP_FOLDER));
+    return tsResult.js.pipe(sourcemaps.write('', { debug: false, includeContent: true, sourceRoot: '../../../../src' })).pipe(gulp.dest(OPTIONS[TASKS.COMPILE_TYPESCRIPT_SRC].TEMP_FOLDER));
 });
 
 gulp.task(
@@ -146,4 +171,3 @@ gulp.task(
 );
 
 //#endregion
-

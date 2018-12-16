@@ -1,6 +1,12 @@
 # Visual studio code
 /.vscode
 
+# nyc
+/.nyc_output
+
+# nyc HTML reporter
+/coverage
+
 /dist
 
 /node_modules
