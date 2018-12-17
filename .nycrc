@@ -2,6 +2,9 @@
     "require": [
         "@babel/register"
     ],
+    "exclude": [
+      "**/test/**"
+    ],
     "sourceMap": true,
     "instrument": false,
     "cache": false
