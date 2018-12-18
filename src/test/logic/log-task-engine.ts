@@ -39,8 +39,15 @@ export class LogTaskEngine extends TaskEngine<LogMessageTaskFlowPart> {
     ): PromiseLike<{} | void> {
         const that = this;
         return new Promise((resolve, reject) => {
-            that.log.logMessage(part.message);
-            resolve();
+            const logAction = () => {
+                that.log.logMessage(part.message);
+                resolve();
+            };
+            if (null == part.waitForPromise) {
+                logAction();
+            } else {
+                part.waitForPromise.then(logAction);
+            }
         });
     }
 }
