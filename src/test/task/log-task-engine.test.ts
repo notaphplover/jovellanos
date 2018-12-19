@@ -77,18 +77,16 @@ export class LogTaskEngineTests implements ITest {
             const engine = new LogTaskEngine(log);
 
             const part1SubscriberIsRegistered = new Promise<{
-                donePromise: Promise<void>,
-                token: number,
+                donePromise: Promise<number>,
             }>(
                 (resolve) => {
-                    const part1IsDone = new Promise<void>((resolveCh) => {
+                    const part1IsDone = new Promise<number>((resolveCh) => {
                         const token = engine.getPartEndListenerAccess().subscribe(partAlias1, () => {
-                            resolveCh();
+                            resolveCh(token);
                         });
-                        resolve({
-                            donePromise: part1IsDone,
-                            token: token,
-                        });
+                    });
+                    resolve({
+                        donePromise: part1IsDone,
                     });
                 },
             );
