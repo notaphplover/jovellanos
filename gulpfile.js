@@ -29,7 +29,7 @@ const BABEL_OPTIONS = {
 const BABEL_OPTIONS_TEST = {
     env: {
         test: {
-            plugins: [ 'istanbul' ],
+            plugins: ['istanbul'],
         }
     },
     plugins: [
@@ -184,8 +184,9 @@ gulp.task(
                 'npm test',
                 {
                     cwd: __dirname,
+                    stdio: 'inherit',
                 },
             );
         }
     )
-)
+);
