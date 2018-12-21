@@ -10,3 +10,6 @@
 /dist
 
 /node_modules
+
+# coveralls config
+.coveralls.yml
