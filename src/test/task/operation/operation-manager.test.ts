@@ -10,13 +10,42 @@ const operationManagerTestEventAlias = 'test-alias';
 export class OperationManagerTests implements ITest {
     public performTests(): void {
         describe('Operation Manager Tests', () => {
+            this.itMustBeToBeAbleToBeDisposed();
             this.itMustBeInitializable();
             this.itMustBeAbleToRaiseAnEventListeners();
             this.itMustBeAbleToRaiseMultipleEventListeners();
+            this.itMustNotBeAbleToUnsuscribeByAnUnregisteredAlias();
         });
     }
 
-    private itMustBeAbleToRaiseAnEventListeners() {
+    private itMustBeToBeAbleToBeDisposed(): void {
+        it('mustBeToBeAbleToBeDisposed', () => {
+            const eventEmitter = new EventEmitter();
+            const operationManager = new OperationManager<ITaskFlowPartEndArgs<LogMessageTaskFlowPart>>(
+                operationManagerTestEventAlias,
+                eventEmitter,
+            );
+            const log = new SampleLog();
+            operationManager.subscribe(
+                'sample-alias',
+                (eventArgs) => log.logMessage(eventArgs.part.message),
+            );
+            operationManager.dispose();
+            eventEmitter.emit(
+                operationManagerTestEventAlias,
+                {
+                    aliases: ['sample-alias'],
+                    part: new LogMessageTaskFlowPart(
+                        'sample-task-alias',
+                        'sample-message-text',
+                    ),
+                } as ITaskFlowPartEndArgs<LogMessageTaskFlowPart>,
+            );
+            expect(log.getMessages()).toEqual([]);
+        });
+    }
+
+    private itMustBeAbleToRaiseAnEventListeners(): void {
         it('mustBeAbleToRaiseAnEventListeners', () => {
             const eventEmitter = new EventEmitter();
             const operationManager = new OperationManager<ITaskFlowPartEndArgs<LogMessageTaskFlowPart>>(
@@ -42,7 +71,7 @@ export class OperationManagerTests implements ITest {
         });
     }
 
-    private itMustBeAbleToRaiseMultipleEventListeners() {
+    private itMustBeAbleToRaiseMultipleEventListeners(): void {
         it('mustBeAbleToRaiseMultipleEventListeners', () => {
             const eventEmitter = new EventEmitter();
             const operationManager = new OperationManager<ITaskFlowPartEndArgs<LogMessageTaskFlowPart>>(
@@ -72,7 +101,7 @@ export class OperationManagerTests implements ITest {
         });
     }
 
-    private itMustBeInitializable() {
+    private itMustBeInitializable(): void {
         it('mustBeInitializable', () => {
             const eventEmitter = new EventEmitter();
             const operationManager = new OperationManager<ITaskFlowPartEndArgs<LogMessageTaskFlowPart>>(
@@ -80,6 +109,17 @@ export class OperationManagerTests implements ITest {
                 eventEmitter,
             );
             expect(operationManager).not.toBeNull();
+        });
+    }
+
+    private itMustNotBeAbleToUnsuscribeByAnUnregisteredAlias() {
+        it('mustNotBeAbleToUnsuscribeByAnUnregisteredAlias', () => {
+            const eventEmitter = new EventEmitter();
+            const operationManager = new OperationManager<ITaskFlowPartEndArgs<LogMessageTaskFlowPart>>(
+                operationManagerTestEventAlias,
+                eventEmitter,
+            );
+            expect(operationManager.unsubscribe('unexisting-alias', 0)).toBe(false);
         });
     }
 }
