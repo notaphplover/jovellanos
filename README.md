@@ -5,11 +5,25 @@ Asyncronous task engine written in Typescript.
 [![Build status](https://travis-ci.com/notaphplover/jovellanos.svg?branch=master)](https://travis-ci.com/notaphplover/jovellanos.svg?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/notaphplover/jovellanos/badge.svg?branch=master)](https://coveralls.io/github/notaphplover/jovellanos?branch=master)
 
+## Installing the library
+
+You can install the library using npm:
+
+```
+npm i jovellanos
+```
+
 ## First steps
 
-The setup of this project is simple:
+If you are interested in the project, the setup is really simple:
 
-1. Install the npm dependencies of the project
+1. Clone the project
+
+```
+git clone https://github.com/notaphplover/jovellanos.git
+```
+
+2. Install the npm dependencies of this project
 
 ```
 npm i
