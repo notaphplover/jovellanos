@@ -4,6 +4,7 @@ Asyncronous task engine written in Typescript.
 
 [![Build status](https://travis-ci.com/notaphplover/jovellanos.svg?branch=master)](https://travis-ci.com/notaphplover/jovellanos.svg?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/notaphplover/jovellanos/badge.svg?branch=master)](https://coveralls.io/github/notaphplover/jovellanos?branch=master)
+[![npm version](https://badge.fury.io/js/jovellanos.svg)](https://badge.fury.io/js/jovellanos)
 
 ## Installing the library
 
