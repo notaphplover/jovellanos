@@ -7,8 +7,7 @@
 # nyc HTML reporter
 /coverage
 
-/dist
-
+# Docs folder
 /docs
 
 # npm dependencies
