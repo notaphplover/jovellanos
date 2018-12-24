@@ -2,6 +2,7 @@ const browserify = require('browserify');
 const buffer = require('vinyl-buffer');
 const execSync = require('child_process').execSync;
 const gulp = require('gulp');
+const merge2 = require('merge2');
 const path = require('path');
 const source = require('vinyl-source-stream');
 const sourcemaps = require('gulp-sourcemaps');
@@ -158,25 +159,35 @@ function bundleTest() {
 }
 
 gulp.task(TASKS.COMPILE_TYPESCRIPT_SRC, function () {
-    var tsProjectSrc = ts.createProject(OPTIONS[TASKS.COMPILE_TYPESCRIPT_SRC].CONFIG_FILE, { noResolve: true });
-    var tsResult = tsProjectSrc.src().pipe(sourcemaps.init()).pipe(tsProjectSrc());
-    return tsResult
-        .js
-        .pipe(
-            sourcemaps.write(
-                '',
-                {
-                    debug: false,
-                    includeContent: true,
-                    sourceRoot: '../../../../src'
-                }
-            )
-        )
-        .pipe(
-            gulp.dest(
-                OPTIONS[TASKS.COMPILE_TYPESCRIPT_SRC].TEMP_FOLDER
-            )
+    const tsProjectSrc = ts
+        .createProject(
+            OPTIONS[TASKS.COMPILE_TYPESCRIPT_SRC].CONFIG_FILE,
+            { noResolve: true }
         );
+
+    const tsResult = tsProjectSrc
+        .src()
+        .pipe(sourcemaps.init())
+        .pipe(tsProjectSrc());
+
+    return merge2([
+        tsResult
+            .js
+            .pipe(
+                sourcemaps.write(
+                    '',
+                    {
+                        debug: false,
+                        includeContent: true,
+                        sourceRoot: '../../../../src'
+                    }
+                )
+            )
+            .pipe(gulp.dest(OPTIONS[TASKS.COMPILE_TYPESCRIPT_SRC].TEMP_FOLDER)),
+        tsResult
+            .dts
+            .pipe(gulp.dest(OPTIONS[TASKS.COMPILE_TYPESCRIPT_SRC].TEMP_FOLDER)),
+    ]);
 });
 
 gulp.task(
