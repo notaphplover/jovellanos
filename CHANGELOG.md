@@ -1,4 +1,4 @@
-## 1.0.x
+## 1.0.3
 - Added declaration types.
 
 ## 1.0.2
