@@ -209,7 +209,7 @@ export abstract class TaskEngine<TPart extends ITaskFlowPart> {
                             .then(resolve);
                         break;
                     default:
-                        throw new Error('Unexpected when entity type.');
+                        reject(new Error('Unexpected when entity type.'));
                 }
             }
         });

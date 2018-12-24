@@ -1,21 +1,14 @@
-import { ITaskFlow } from '../../task/flow/task-flow';
 import { TaskPartBeginConstraint } from '../../task/flow/task-part-begin-constraint';
 import { TaskPartEndConstraint } from '../../task/flow/task-part-end-constraint';
 import { TaskGroupConstraint } from '../../task/flow/task-part-group-constraint';
 import { TaskTimeConstraint } from '../../task/flow/task-part-time-constraint';
 import { TaskPartWhenOperator } from '../../task/task-part-when-operator';
-import { ITest } from '../ITest';
-import {
-    LogMessageTaskFlowPart,
-} from '../logic/flow/log-message-task-flow-part';
+import { LogMessageTaskFlowPart, } from '../logic/flow/log-message-task-flow-part';
 import { LogTaskEngine } from '../logic/log-task-engine';
 import { SampleLog } from '../logic/sample-log';
-
-const LogMessageTaskFlowPartAliasPrefix: string = 'jovellanos/test/LogMessageTaskFlowPart/';
-
-export class LogTaskEngineTests implements ITest {
-
-    public performTests(): void {
+const LogMessageTaskFlowPartAliasPrefix = 'jovellanos/test/LogMessageTaskFlowPart/';
+export class LogTaskEngineTests {
+    performTests() {
         describe('Log Task Engine Tests', () => {
             this.itMustBeAbleToPerformASimpleTask();
             this.itMustBeAbleToPerformATaskAfterACertainAmountOfTime();
@@ -35,16 +28,12 @@ export class LogTaskEngineTests implements ITest {
             this.itMustStartWithNoMessages();
         });
     }
-
-    private itMustBeAbleToPerformASimpleTask(): void {
+    itMustBeAbleToPerformASimpleTask() {
         it('mustBeAbleToPerformASimpleTask', () => {
             const engine = new LogTaskEngine();
             const simpleTaskFlow = {
                 parts: [
-                    new LogMessageTaskFlowPart(
-                        LogMessageTaskFlowPartAliasPrefix + 'sample',
-                        'test',
-                    ),
+                    new LogMessageTaskFlowPart(LogMessageTaskFlowPartAliasPrefix + 'sample', 'test'),
                 ],
             };
             Promise.all(engine.handle(simpleTaskFlow)).then(() => {
@@ -52,86 +41,42 @@ export class LogTaskEngineTests implements ITest {
             });
         });
     }
-
-    private itMustBeAbleToPerformATaskAfterACertainAmountOfTime() {
+    itMustBeAbleToPerformATaskAfterACertainAmountOfTime() {
         it('mustBeAbleToPerformATaskAfterACertainAmountOfTime', () => {
             const partAlias1 = LogMessageTaskFlowPartAliasPrefix + 'sample-1';
             const partAlias2 = LogMessageTaskFlowPartAliasPrefix + 'sample-2';
             const partAlias3 = LogMessageTaskFlowPartAliasPrefix + 'sample-3';
-
             const log = new SampleLog();
             const engine = new LogTaskEngine(log);
-
             const taskFlow = {
                 parts: [
-                    new LogMessageTaskFlowPart(
-                        partAlias1,
-                        'test-1',
-                        new Promise((resolve) => setTimeout(resolve, 200)),
-                    ),
-                    new LogMessageTaskFlowPart(
-                        partAlias2,
-                        'test-2',
-                        null,
-                        new TaskTimeConstraint(null, 250),
-                    ),
-                    new LogMessageTaskFlowPart(
-                        partAlias3,
-                        'test-3',
-                        new Promise((resolve) => setTimeout(resolve, 300)),
-                    ),
+                    new LogMessageTaskFlowPart(partAlias1, 'test-1', new Promise((resolve) => setTimeout(resolve, 200))),
+                    new LogMessageTaskFlowPart(partAlias2, 'test-2', null, new TaskTimeConstraint(null, 250)),
+                    new LogMessageTaskFlowPart(partAlias3, 'test-3', new Promise((resolve) => setTimeout(resolve, 300))),
                 ],
             };
-
             Promise.all(engine.handle(taskFlow)).then(() => {
                 expect(engine.getLog().getMessages()).toEqual(['test-1', 'test-2', 'test-3']);
             });
         });
     }
-
-    private itMustBeAbleToPerformATaskAfterTheEndOfAllTasksOfATaskGroup() {
+    itMustBeAbleToPerformATaskAfterTheEndOfAllTasksOfATaskGroup() {
         it('mustBeAbleToPerformATaskAfterTheEndOfAllTasksOfATaskGroup', () => {
             const partAlias1 = LogMessageTaskFlowPartAliasPrefix + 'sample-1';
             const partAlias2 = LogMessageTaskFlowPartAliasPrefix + 'sample-2';
             const partAlias3 = LogMessageTaskFlowPartAliasPrefix + 'sample-3';
-
             const log = new SampleLog();
             const engine = new LogTaskEngine(log);
-
             const taskFlow = {
                 parts: [
-                    new LogMessageTaskFlowPart(
-                        partAlias1,
-                        'test-1',
-                        null,
-                        new TaskGroupConstraint(
-                            null,
-                            [
-                                new TaskPartEndConstraint(
-                                    null,
-                                    partAlias2,
-                                ),
-                                new TaskPartEndConstraint(
-                                    null,
-                                    partAlias3,
-                                ),
-                            ],
-                            TaskPartWhenOperator.AND,
-                        ),
-                    ),
-                    new LogMessageTaskFlowPart(
-                        partAlias2,
-                        'test-2',
-                        null,
-                    ),
-                    new LogMessageTaskFlowPart(
-                        partAlias3,
-                        'test-3',
-                        null,
-                    ),
+                    new LogMessageTaskFlowPart(partAlias1, 'test-1', null, new TaskGroupConstraint(null, [
+                        new TaskPartEndConstraint(null, partAlias2),
+                        new TaskPartEndConstraint(null, partAlias3),
+                    ], TaskPartWhenOperator.AND)),
+                    new LogMessageTaskFlowPart(partAlias2, 'test-2', null),
+                    new LogMessageTaskFlowPart(partAlias3, 'test-3', null),
                 ],
             };
-
             Promise.all(engine.handle(taskFlow)).then(() => {
                 const logMessages = engine.getLog().getMessages();
                 const firstOnes = ['test-2', 'test-3'];
@@ -142,8 +87,7 @@ export class LogTaskEngineTests implements ITest {
             });
         });
     }
-
-    private itMustBeAbleToPerformATaskAfterTheEndOfAnotherOne(): void {
+    itMustBeAbleToPerformATaskAfterTheEndOfAnotherOne() {
         it('mustBeAbleToPerformATaskAfterTheEndOfAnotherOne', () => {
             const partAlias1 = LogMessageTaskFlowPartAliasPrefix + 'sample-1';
             const partAlias2 = LogMessageTaskFlowPartAliasPrefix + 'sample-2';
@@ -151,12 +95,7 @@ export class LogTaskEngineTests implements ITest {
             const engine = new LogTaskEngine(log);
             const taskFlow = {
                 parts: [
-                    new LogMessageTaskFlowPart(
-                        partAlias1,
-                        'test1',
-                        null,
-                        new TaskPartEndConstraint(null, partAlias2),
-                    ),
+                    new LogMessageTaskFlowPart(partAlias1, 'test1', null, new TaskPartEndConstraint(null, partAlias2)),
                     new LogMessageTaskFlowPart(partAlias2, 'test2'),
                 ],
             };
@@ -165,42 +104,27 @@ export class LogTaskEngineTests implements ITest {
             });
         });
     }
-
-    private itMustBeAbleToPerformATaskAfterTheStartOfAnotherOne(): void {
+    itMustBeAbleToPerformATaskAfterTheStartOfAnotherOne() {
         it('mustBeAbleToPerformATaskAfterTheStartOfAnotherOne', () => {
             const partAlias1 = LogMessageTaskFlowPartAliasPrefix + 'sample-1';
             const partAlias2 = LogMessageTaskFlowPartAliasPrefix + 'sample-2';
             const log = new SampleLog();
             const engine = new LogTaskEngine(log);
-
-            const part1SubscriberIsRegistered = new Promise<{
-                donePromise: Promise<number>,
-            }>(
-                (resolve) => {
-                    const part1IsDone = new Promise<number>((resolveCh) => {
-                        const token = engine.getPartEndListenerAccess().subscribe(partAlias1, () => {
-                            resolveCh(token);
-                        });
+            const part1SubscriberIsRegistered = new Promise((resolve) => {
+                const part1IsDone = new Promise((resolveCh) => {
+                    const token = engine.getPartEndListenerAccess().subscribe(partAlias1, () => {
+                        resolveCh(token);
                     });
-                    resolve({
-                        donePromise: part1IsDone,
-                    });
-                },
-            );
+                });
+                resolve({
+                    donePromise: part1IsDone,
+                });
+            });
             part1SubscriberIsRegistered.then((promiseResult) => {
                 const taskFlow = {
                     parts: [
-                        new LogMessageTaskFlowPart(
-                            partAlias1,
-                            'test1',
-                            null,
-                            new TaskPartBeginConstraint(null, partAlias2),
-                        ),
-                        new LogMessageTaskFlowPart(
-                            partAlias2,
-                            'test2',
-                            promiseResult.donePromise,
-                        ),
+                        new LogMessageTaskFlowPart(partAlias1, 'test1', null, new TaskPartBeginConstraint(null, partAlias2)),
+                        new LogMessageTaskFlowPart(partAlias2, 'test2', promiseResult.donePromise),
                     ],
                 };
                 Promise.all(engine.handle(taskFlow)).then(() => {
@@ -209,52 +133,34 @@ export class LogTaskEngineTests implements ITest {
             });
         });
     }
-
-    private itMustBeAbleToPerformATaskAfterTheStartOfAnyTaskOfATaskGroup() {
+    itMustBeAbleToPerformATaskAfterTheStartOfAnyTaskOfATaskGroup() {
         it('mustBeAbleToPerformATaskAfterTheStartOfAnyTaskOfATaskGroup', () => {
             const partAlias1 = LogMessageTaskFlowPartAliasPrefix + 'sample-1';
             const partAlias2 = LogMessageTaskFlowPartAliasPrefix + 'sample-2';
             const partAlias3 = LogMessageTaskFlowPartAliasPrefix + 'sample-3';
-
             const log = new SampleLog();
             const engine = new LogTaskEngine(log);
-
-            const part1SubscriberIsRegistered = new Promise<{
-                donePromise: Promise<number>,
-            }>(
-                (resolve) => {
-                    const part1IsDone = new Promise<number>((resolveCh) => {
-                        const token = engine.getPartEndListenerAccess().subscribe(partAlias1, () => {
-                            resolveCh(token);
-                        });
+            const part1SubscriberIsRegistered = new Promise((resolve) => {
+                const part1IsDone = new Promise((resolveCh) => {
+                    const token = engine.getPartEndListenerAccess().subscribe(partAlias1, () => {
+                        resolveCh(token);
                     });
-                    resolve({
-                        donePromise: part1IsDone,
-                    });
-                },
-            );
-
+                });
+                resolve({
+                    donePromise: part1IsDone,
+                });
+            });
             part1SubscriberIsRegistered.then((promiseResult) => {
                 const taskFlow = {
                     parts: [
-                        new LogMessageTaskFlowPart(
-                            partAlias1,
-                            'test-1',
-                            null,
-                            new TaskGroupConstraint(
-                                null,
-                                [
-                                    new TaskPartBeginConstraint(null, partAlias2),
-                                    new TaskPartBeginConstraint(null, partAlias3),
-                                ],
-                                TaskPartWhenOperator.OR,
-                            ),
-                        ),
+                        new LogMessageTaskFlowPart(partAlias1, 'test-1', null, new TaskGroupConstraint(null, [
+                            new TaskPartBeginConstraint(null, partAlias2),
+                            new TaskPartBeginConstraint(null, partAlias3),
+                        ], TaskPartWhenOperator.OR)),
                         new LogMessageTaskFlowPart(partAlias2, 'test-2', promiseResult.donePromise),
                         new LogMessageTaskFlowPart(partAlias3, 'test-3', promiseResult.donePromise),
                     ],
                 };
-
                 Promise.all(engine.handle(taskFlow)).then(() => {
                     const logMessages = engine.getLog().getMessages();
                     const lastOnes = ['test-2', 'test-3'];
@@ -266,18 +172,14 @@ export class LogTaskEngineTests implements ITest {
             });
         });
     }
-
-    private itMustBeAbleToSubscribeAPartEndEventListener(): void {
+    itMustBeAbleToSubscribeAPartEndEventListener() {
         it('mustBeAbleToSubscribeAPartEndEventListener', () => {
             const partAlias = LogMessageTaskFlowPartAliasPrefix + 'sample';
             const log = new SampleLog();
             const engine = new LogTaskEngine(log);
-            engine.getPartEndListenerAccess().subscribe(
-                partAlias,
-                (eventArgs) => {
-                    log.logMessage('end.' + eventArgs.part.message);
-                },
-            );
+            engine.getPartEndListenerAccess().subscribe(partAlias, (eventArgs) => {
+                log.logMessage('end.' + eventArgs.part.message);
+            });
             const simpleTaskFlow = {
                 parts: [
                     new LogMessageTaskFlowPart(partAlias, 'test'),
@@ -291,18 +193,14 @@ export class LogTaskEngineTests implements ITest {
             });
         });
     }
-
-    private itMustBeAbleToSubscribeAPartStartEventListener(): void {
+    itMustBeAbleToSubscribeAPartStartEventListener() {
         it('mustBeAbleToSubscribeAPartStartEventListener', () => {
             const partAlias = LogMessageTaskFlowPartAliasPrefix + 'sample';
             const log = new SampleLog();
             const engine = new LogTaskEngine(log);
-            engine.getPartStartListenerAccess().subscribe(
-                partAlias,
-                (eventArgs) => {
-                    log.logMessage('start.' + eventArgs.part.message);
-                },
-            );
+            engine.getPartStartListenerAccess().subscribe(partAlias, (eventArgs) => {
+                log.logMessage('start.' + eventArgs.part.message);
+            });
             const simpleTaskFlow = {
                 parts: [
                     new LogMessageTaskFlowPart(partAlias, 'test'),
@@ -316,18 +214,14 @@ export class LogTaskEngineTests implements ITest {
             });
         });
     }
-
-    private itMustBeAbleToUnsubscribeAPartEndEventListener(): void {
+    itMustBeAbleToUnsubscribeAPartEndEventListener() {
         it('mustBeAbleToUnsubscribeAPartEndEventListener', () => {
             const partAlias = LogMessageTaskFlowPartAliasPrefix + 'sample';
             const log = new SampleLog();
             const engine = new LogTaskEngine(log);
-            const token = engine.getPartEndListenerAccess().subscribe(
-                partAlias,
-                (eventArgs) => {
-                    log.logMessage('end.' + eventArgs.part.message);
-                },
-            );
+            const token = engine.getPartEndListenerAccess().subscribe(partAlias, (eventArgs) => {
+                log.logMessage('end.' + eventArgs.part.message);
+            });
             const result = engine.getPartEndListenerAccess().unsubscribe(partAlias, token);
             const simpleTaskFlow = {
                 parts: [
@@ -342,18 +236,14 @@ export class LogTaskEngineTests implements ITest {
             });
         });
     }
-
-    private itMustBeAbleToUnsubscribeAPartStartEventListener(): void {
+    itMustBeAbleToUnsubscribeAPartStartEventListener() {
         it('mustBeAbleToUnsubscribeAPartStartEventListener', () => {
             const partAlias = LogMessageTaskFlowPartAliasPrefix + 'sample';
             const log = new SampleLog();
             const engine = new LogTaskEngine(log);
-            const token = engine.getPartStartListenerAccess().subscribe(
-                partAlias,
-                (eventArgs) => {
-                    log.logMessage('end.' + eventArgs.part.message);
-                },
-            );
+            const token = engine.getPartStartListenerAccess().subscribe(partAlias, (eventArgs) => {
+                log.logMessage('end.' + eventArgs.part.message);
+            });
             const result = engine.getPartStartListenerAccess().unsubscribe(partAlias, token);
             const simpleTaskFlow = {
                 parts: [
@@ -368,26 +258,23 @@ export class LogTaskEngineTests implements ITest {
             });
         });
     }
-
-    private itMustBeInitializable(): void {
+    itMustBeInitializable() {
         it('mustBeInitializable', () => {
             const engine = new LogTaskEngine();
             expect(engine).not.toBeNull();
         });
     }
-
-    private itMustNotAllowToHandleANullInstance(): void {
+    itMustNotAllowToHandleANullInstance() {
         it('mustNotAllowToHandleANullInstance', () => {
             const engine = new LogTaskEngine();
-            expect(() => {engine.handle(null); }).toThrowError();
+            expect(() => { engine.handle(null); }).toThrowError();
         });
     }
-
-    private itMustNotAllowToHandleAnInstanceWithNoParts(): void {
+    itMustNotAllowToHandleAnInstanceWithNoParts() {
         it('mustNotAllowToHandleAnInstanceWithNoParts', () => {
             const engine = new LogTaskEngine();
             expect(() => {
-                engine.handle({} as ITaskFlow<LogMessageTaskFlowPart>);
+                engine.handle({});
             }).toThrowError();
             expect(() => {
                 engine.handle({
@@ -396,21 +283,15 @@ export class LogTaskEngineTests implements ITest {
             }).toThrowError();
         });
     }
-
-    private itMustNotBeAbleToHandleAnInvalidTask() {
+    itMustNotBeAbleToHandleAnInvalidTask() {
         it('mustNotBeAbleToHandleAnInvalidTask', () => {
             const engine = new LogTaskEngine();
             const simpleTaskFlow = {
                 parts: [
-                    new LogMessageTaskFlowPart(
-                        LogMessageTaskFlowPartAliasPrefix + 'sample',
-                        'test',
-                        null,
-                        {
-                            after: null,
-                            constraintType: 'invalidType',
-                        },
-                    ),
+                    new LogMessageTaskFlowPart(LogMessageTaskFlowPartAliasPrefix + 'sample', 'test', null, {
+                        after: null,
+                        constraintType: 'invalidType',
+                    }),
                 ],
             };
             Promise.all(engine.handle(simpleTaskFlow))
@@ -418,18 +299,18 @@ export class LogTaskEngineTests implements ITest {
                 .catch((err) => expect(err instanceof Error).toBe(true));
         });
     }
-
-    private itMustStartWithALog(): void {
+    itMustStartWithALog() {
         it('mustStartWithALog', () => {
             const engine = new LogTaskEngine();
             expect(engine.getLog()).not.toBeNull();
         });
     }
-
-    private itMustStartWithNoMessages(): void {
+    itMustStartWithNoMessages() {
         it('mustStartWithNoMessages', () => {
             const engine = new LogTaskEngine();
             expect(engine.getLog().getMessages().length).toBe(0);
         });
     }
 }
+
+//# sourceMappingURL=log-task-engine.test.js.map

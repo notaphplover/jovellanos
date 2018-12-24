@@ -2,11 +2,10 @@
   "name": "jovellanos",
   "version": "1.0.0",
   "description": "Asyncronous task engine.",
-  "main": "index.js",
+  "main": "dist/js/module/main.js",
   "scripts": {
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
-    "test": "node_modules/nyc/bin/nyc.js --reporter=lcov node ./node_modules/jasmine/bin/jasmine.js ./dist/js/bundle.test.js",
-    "test-html": "node_modules/nyc/bin/nyc.js --reporter=html node ./node_modules/jasmine/bin/jasmine.js ./dist/js/bundle.test.js"
+    "test": "node_modules/nyc/bin/nyc.js --reporter=lcov node ./node_modules/jasmine/bin/jasmine.js ./dist/js/bundle/bundle.test.js"
   },
   "repository": {
     "type": "git",
@@ -32,12 +31,14 @@
     "coveralls": "^3.0.2",
     "gulp": "^4.0.0",
     "gulp-sourcemaps": "^2.6.4",
+    "gulp-typedoc": "^2.2.1",
     "gulp-typescript": "^5.0.0",
     "gulp-uglify": "^3.0.1",
     "jasmine": "^3.3.1",
     "jasmine-core": "^3.3.0",
     "nyc": "^13.1.0",
     "tslint": "^5.11.0",
+    "typedoc": "^0.13.0",
     "typescript": "^3.2.2",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"

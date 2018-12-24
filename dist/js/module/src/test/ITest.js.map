@@ -1,0 +1,1 @@
+{"version":3,"sources":["test/ITest.ts"],"names":[],"mappings":"","file":"ITest.js","sourcesContent":["/**\r\n * Represents a Test Module\r\n */\r\nexport interface ITest {\r\n    /**\r\n     * Method to request the execution of all the tests.\r\n     */\r\n    performTests(): void;\r\n}\r\n"],"sourceRoot":"../../../../../src"}

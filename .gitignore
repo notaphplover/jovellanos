@@ -1,14 +1,16 @@
+# nyc coverage output
+/.nyc_output
+
 # Visual studio code
 /.vscode
-
-# nyc
-/.nyc_output
 
 # nyc HTML reporter
 /coverage
 
-/dist
+# Docs folder
+/docs
 
+# npm dependencies
 /node_modules
 
 # coveralls config
