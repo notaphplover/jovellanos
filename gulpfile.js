@@ -66,9 +66,9 @@ const TASKS = {
 var OPTIONS = {};
 
 OPTIONS[TASKS.BUNDLE_DEV] = {
-    BROWSERIFY_ENTRY: 'dist/js/tmp/src/main.js',
+    BROWSERIFY_ENTRY: 'dist/js/module/src/main.js',
     BUNDLE_NAME: 'bundle.dev.js',
-    DESTINATION_FOLDER: 'dist/js',
+    DESTINATION_FOLDER: 'dist/js/bundle',
     MODULE_NAME: 'sora',
 };
 
@@ -80,7 +80,7 @@ OPTIONS[TASKS.BUNDLE_PROD] = {
 };
 
 OPTIONS[TASKS.BUNDLE_TEST] = {
-    BROWSERIFY_ENTRY: 'dist/js/tmp/src/main.test.js',
+    BROWSERIFY_ENTRY: 'dist/js/module/src/main.test.js',
     BUNDLE_NAME: 'bundle.test.js',
     DESTINATION_FOLDER: OPTIONS[TASKS.BUNDLE_DEV].DESTINATION_FOLDER,
     MODULE_NAME: 'soraTest',
@@ -88,7 +88,7 @@ OPTIONS[TASKS.BUNDLE_TEST] = {
 
 OPTIONS[TASKS.COMPILE_TYPESCRIPT_SRC] = {
     CONFIG_FILE: 'src.tsconfig.json',
-    TEMP_FOLDER: 'dist/js/tmp/src',
+    TEMP_FOLDER: 'dist/js/module/src',
 };
 
 OPTIONS[TASKS.TEST] = {
@@ -113,7 +113,7 @@ function bundleDev() {
         // Gulp Plugins Here
         .pipe(sourcemaps.init({debug: true, loadMaps: true}))
         .pipe(sourcemaps.write('./', {
-            sourceRoot: '..',
+            sourceRoot: '.',
         }))
         .pipe(gulp.dest('./'));
 }
@@ -152,7 +152,7 @@ function bundleTest() {
         // Gulp Plugins Here
         .pipe(sourcemaps.init({debug: true, loadMaps: true}))
         .pipe(sourcemaps.write('./', {
-            sourceRoot: '..',
+            sourceRoot: '.',
         }))
         .pipe(gulp.dest('./'));
 }
