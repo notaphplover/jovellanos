@@ -6,6 +6,7 @@ const path = require('path');
 const source = require('vinyl-source-stream');
 const sourcemaps = require('gulp-sourcemaps');
 const ts = require('gulp-typescript');
+const typedoc = require('gulp-typedoc');
 const uglify = require('gulp-uglify');
 
 const BABEL_OPTIONS = {
@@ -56,6 +57,7 @@ const TASKS = {
     BUNDLE_TEST: 'bundle-test',
     COMPILE_TYPESCRIPT_SRC: 'compile-typescript-src',
     DEFAULT: 'default',
+    DOCS: 'typedoc',
     TEST: 'test',
 };
 
@@ -158,7 +160,23 @@ function bundleTest() {
 gulp.task(TASKS.COMPILE_TYPESCRIPT_SRC, function () {
     var tsProjectSrc = ts.createProject(OPTIONS[TASKS.COMPILE_TYPESCRIPT_SRC].CONFIG_FILE, { noResolve: true });
     var tsResult = tsProjectSrc.src().pipe(sourcemaps.init()).pipe(tsProjectSrc());
-    return tsResult.js.pipe(sourcemaps.write('', { debug: false, includeContent: true, sourceRoot: '../../../../src' })).pipe(gulp.dest(OPTIONS[TASKS.COMPILE_TYPESCRIPT_SRC].TEMP_FOLDER));
+    return tsResult
+        .js
+        .pipe(
+            sourcemaps.write(
+                '',
+                {
+                    debug: false,
+                    includeContent: true,
+                    sourceRoot: '../../../../src'
+                }
+            )
+        )
+        .pipe(
+            gulp.dest(
+                OPTIONS[TASKS.COMPILE_TYPESCRIPT_SRC].TEMP_FOLDER
+            )
+        );
 });
 
 gulp.task(
@@ -190,3 +208,14 @@ gulp.task(
         }
     )
 );
+
+gulp.task(TASKS.DOCS, function() {
+    return gulp
+        .src(['src/**/*.ts'])
+        .pipe(typedoc({
+            target: 'es6',
+            out: 'docs/api',
+            name: 'Jovellanos Docs'
+        }))
+    ;
+});
