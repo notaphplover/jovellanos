@@ -30,6 +30,7 @@ export class LogTaskEngineTests implements ITest {
             this.itMustBeInitializable();
             this.itMustNotAllowToHandleANullInstance();
             this.itMustNotAllowToHandleAnInstanceWithNoParts();
+            this.itMustNotBeAbleToHandleAnInvalidTask();
             this.itMustStartWithALog();
             this.itMustStartWithNoMessages();
         });
@@ -393,6 +394,28 @@ export class LogTaskEngineTests implements ITest {
                     parts: null,
                 });
             }).toThrowError();
+        });
+    }
+
+    private itMustNotBeAbleToHandleAnInvalidTask() {
+        it('mustNotBeAbleToHandleAnInvalidTask', () => {
+            const engine = new LogTaskEngine();
+            const simpleTaskFlow = {
+                parts: [
+                    new LogMessageTaskFlowPart(
+                        LogMessageTaskFlowPartAliasPrefix + 'sample',
+                        'test',
+                        null,
+                        {
+                            after: null,
+                            constraintType: 'invalidType',
+                        },
+                    ),
+                ],
+            };
+            Promise.all(engine.handle(simpleTaskFlow))
+                .then(fail)
+                .catch((err) => expect(err instanceof Error).toBe(true));
         });
     }
 
