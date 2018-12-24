@@ -42,6 +42,16 @@ This task can be performed calling the task 'build' defined in the gulpfile.js o
 node ./node_modules/gulp/bin/gulp.js build
 ```
 
+## Documentation build process.
+
+The API documentation is generated using [Typedoc](https://github.com/TypeStrong/typedoc).
+
+```
+node ./node_modules/gulp/bin/gulp.js typedoc
+```
+
+The docs will be generated at the **docs/api** folder.
+
 ## Running tests
 
 Tests can be run using the run task defined in the gulpfile of the project:
