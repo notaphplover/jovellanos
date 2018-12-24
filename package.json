@@ -1,6 +1,6 @@
 {
   "name": "jovellanos",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Asyncronous task engine.",
   "main": "dist/js/module/main.js",
   "scripts": {
@@ -36,6 +36,7 @@
     "gulp-uglify": "^3.0.1",
     "jasmine": "^3.3.1",
     "jasmine-core": "^3.3.0",
+    "merge2": "^1.2.3",
     "nyc": "^13.1.0",
     "tslint": "^5.11.0",
     "typedoc": "^0.13.0",

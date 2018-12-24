@@ -1,3 +1,6 @@
+## 1.0.3
+- Added declaration types.
+
 ## 1.0.2
 - Added correct prefix in package.json.
 
