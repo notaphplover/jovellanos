@@ -1,3 +1,8 @@
+## 1.1.0
+- Added CommonJS modules to the build.
+- Fixed bundle's name.
+- Removed core-js dependency that included an ES6 Promise pollyfill.
+
 ## 1.0.3
 - Added declaration types.
 
