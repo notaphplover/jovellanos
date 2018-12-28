@@ -1,14 +1,14 @@
-(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.soraTest = f()}})(function(){var define,module,exports;return (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.jovellanosTest = f()}})(function(){var define,module,exports;return (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 
-var cov_gt2jkfq85 = function () {
-  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/collection/token-map.js",
-      hash = "2e03599e3471447da1db5df1576946b13fffc9aa",
+var cov_vcya34o2x = function () {
+  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/collection/token-map.js",
+      hash = "d56fd9d50b25588dca71047f40a9f4cdec8adb7d",
       Function = function () {}.constructor,
       global = new Function('return this')(),
       gcv = "__coverage__",
       coverageData = {
-    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/collection/token-map.js",
+    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/collection/token-map.js",
     statementMap: {
       "0": {
         start: {
@@ -480,7 +480,7 @@ var cov_gt2jkfq85 = function () {
       mappings: "AAAA,MAAM,OAAO,QAAQ;IAejB;QACI,IAAI,CAAC,QAAQ,GAAG,IAAI,GAAG,EAAa,CAAC;QACrC,IAAI,CAAC,aAAa,GAAG,IAAI,KAAK,EAAE,CAAC;IACrC,CAAC;IAOM,GAAG,CAAC,IAAO;QACd,IAAI,CAAC,KAAK,IAAI,CAAC,aAAa,CAAC,MAAM,EAAE;YACjC,MAAM,SAAS,GAAW,IAAI,CAAC,QAAQ,CAAC,IAAI,CAAC;YAC7C,IAAI,CAAC,QAAQ,CAAC,GAAG,CAAC,SAAS,EAAE,IAAI,CAAC,CAAC;YACnC,OAAO,SAAS,CAAC;SACpB;aAAM;YACH,MAAM,SAAS,GAAW,IAAI,CAAC,aAAa,CAAC,IAAI,CAAC,aAAa,CAAC,MAAM,GAAG,CAAC,CAAC,CAAC;YAC5E,EAAE,IAAI,CAAC,aAAa,CAAC,MAAM,CAAC;YAC5B,IAAI,CAAC,QAAQ,CAAC,GAAG,CAAC,SAAS,EAAE,IAAI,CAAC,CAAC;YACnC,OAAO,SAAS,CAAC;SACpB;IACL,CAAC;IAMM,KAAK;QACR,OAAO,IAAI,CAAC,QAAQ,CAAC,IAAI,CAAC;IAC9B,CAAC;IAMM,OAAO,CAAC,QAAyC;QACpD,IAAI,CAAC,QAAQ,CAAC,OAAO,CAAC,UAAS,KAAQ,EAAE,GAAW;YAChD,QAAQ,CAAC,KAAK,EAAE,GAAG,CAAC,CAAC;QACzB,CAAC,CAAC,CAAC;IACP,CAAC;IAOM,GAAG,CAAC,KAAa;QACpB,OAAO,IAAI,CAAC,QAAQ,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC;IACpC,CAAC;IAOM,MAAM,CAAC,KAAa;QACvB,IAAI,IAAI,CAAC,QAAQ,CAAC,GAAG,CAAC,KAAK,CAAC,EAAE;YAC1B,IAAI,CAAC,QAAQ,CAAC,MAAM,CAAC,KAAK,CAAC,CAAC;YAC5B,IAAI,CAAC,aAAa,CAAC,IAAI,CAAC,aAAa,CAAC,MAAM,CAAC,GAAG,KAAK,CAAC;YACtD,OAAO,IAAI,CAAC;SACf;aAAM;YACH,OAAO,KAAK,CAAC;SAChB;IACL,CAAC;CACJ",
       file: "token-map.js",
       sourcesContent: ["export class TokenMap<T> {\r\n    //#region Properties\r\n\r\n    /**\r\n     * Inner map.\r\n     */\r\n    protected innerMap: Map<number, T>;\r\n\r\n    /**\r\n     * List of unused indexed bellow the maximun used index.\r\n     */\r\n    protected unusedIndexes: number[];\r\n\r\n    //#endregion\r\n\r\n    public constructor() {\r\n        this.innerMap = new Map<number, T>();\r\n        this.unusedIndexes = new Array();\r\n    }\r\n\r\n    /**\r\n     * Adds an element to the array collection.\r\n     * @param elem Element to be added to the array.\r\n     * @returns index in which the element is located.\r\n     */\r\n    public add(elem: T): number {\r\n        if (0 === this.unusedIndexes.length) {\r\n            const lastIndex: number = this.innerMap.size;\r\n            this.innerMap.set(lastIndex, elem);\r\n            return lastIndex;\r\n        } else {\r\n            const lastIndex: number = this.unusedIndexes[this.unusedIndexes.length - 1];\r\n            --this.unusedIndexes.length;\r\n            this.innerMap.set(lastIndex, elem);\r\n            return lastIndex;\r\n        }\r\n    }\r\n\r\n    /**\r\n     * Obtains the amount of elements inside the array.\r\n     * @returns Amount of elements inside the array.\r\n     */\r\n    public count(): number {\r\n        return this.innerMap.size;\r\n    }\r\n\r\n    /**\r\n     * Iterates over the array and applies a function.\r\n     * @param consumer Function to apply to any pair of index-element found (undefined values are discarted).\r\n     */\r\n    public foreach(consumer: (value: T, key: number) => void): void {\r\n        this.innerMap.forEach(function(value: T, key: number) {\r\n            consumer(value, key);\r\n        });\r\n    }\r\n\r\n    /**\r\n     * Obtains an element at the specified index.\r\n     * @param index Index of the element to obtaint.\r\n     * @returns Element obtianed at the specified index.\r\n     */\r\n    public get(index: number): T {\r\n        return this.innerMap.get(index);\r\n    }\r\n\r\n    /**\r\n     * Removes an element at the position specified.\r\n     * @param index Index of the element to be removed.\r\n     * @returns Result of the operation.\r\n     */\r\n    public remove(index: number): boolean {\r\n        if (this.innerMap.has(index)) {\r\n            this.innerMap.delete(index);\r\n            this.unusedIndexes[this.unusedIndexes.length] = index;\r\n            return true;\r\n        } else {\r\n            return false;\r\n        }\r\n    }\r\n}\r\n"],
-      sourceRoot: "../../../../../src"
+      sourceRoot: "../../../../../../src"
     },
     _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184"
   },
@@ -510,81 +510,81 @@ var TokenMap =
 function () {
   function TokenMap() {
     (0, _classCallCheck2.default)(this, TokenMap);
-    cov_gt2jkfq85.f[0]++;
-    cov_gt2jkfq85.s[0]++;
+    cov_vcya34o2x.f[0]++;
+    cov_vcya34o2x.s[0]++;
     this.innerMap = new Map();
-    cov_gt2jkfq85.s[1]++;
+    cov_vcya34o2x.s[1]++;
     this.unusedIndexes = new Array();
   }
 
   (0, _createClass2.default)(TokenMap, [{
     key: "add",
     value: function add(elem) {
-      cov_gt2jkfq85.f[1]++;
-      cov_gt2jkfq85.s[2]++;
+      cov_vcya34o2x.f[1]++;
+      cov_vcya34o2x.s[2]++;
 
       if (0 === this.unusedIndexes.length) {
-        cov_gt2jkfq85.b[0][0]++;
-        var lastIndex = (cov_gt2jkfq85.s[3]++, this.innerMap.size);
-        cov_gt2jkfq85.s[4]++;
+        cov_vcya34o2x.b[0][0]++;
+        var lastIndex = (cov_vcya34o2x.s[3]++, this.innerMap.size);
+        cov_vcya34o2x.s[4]++;
         this.innerMap.set(lastIndex, elem);
-        cov_gt2jkfq85.s[5]++;
+        cov_vcya34o2x.s[5]++;
         return lastIndex;
       } else {
-        cov_gt2jkfq85.b[0][1]++;
+        cov_vcya34o2x.b[0][1]++;
 
-        var _lastIndex = (cov_gt2jkfq85.s[6]++, this.unusedIndexes[this.unusedIndexes.length - 1]);
+        var _lastIndex = (cov_vcya34o2x.s[6]++, this.unusedIndexes[this.unusedIndexes.length - 1]);
 
-        cov_gt2jkfq85.s[7]++;
+        cov_vcya34o2x.s[7]++;
         --this.unusedIndexes.length;
-        cov_gt2jkfq85.s[8]++;
+        cov_vcya34o2x.s[8]++;
         this.innerMap.set(_lastIndex, elem);
-        cov_gt2jkfq85.s[9]++;
+        cov_vcya34o2x.s[9]++;
         return _lastIndex;
       }
     }
   }, {
     key: "count",
     value: function count() {
-      cov_gt2jkfq85.f[2]++;
-      cov_gt2jkfq85.s[10]++;
+      cov_vcya34o2x.f[2]++;
+      cov_vcya34o2x.s[10]++;
       return this.innerMap.size;
     }
   }, {
     key: "foreach",
     value: function foreach(consumer) {
-      cov_gt2jkfq85.f[3]++;
-      cov_gt2jkfq85.s[11]++;
+      cov_vcya34o2x.f[3]++;
+      cov_vcya34o2x.s[11]++;
       this.innerMap.forEach(function (value, key) {
-        cov_gt2jkfq85.f[4]++;
-        cov_gt2jkfq85.s[12]++;
+        cov_vcya34o2x.f[4]++;
+        cov_vcya34o2x.s[12]++;
         consumer(value, key);
       });
     }
   }, {
     key: "get",
     value: function get(index) {
-      cov_gt2jkfq85.f[5]++;
-      cov_gt2jkfq85.s[13]++;
+      cov_vcya34o2x.f[5]++;
+      cov_vcya34o2x.s[13]++;
       return this.innerMap.get(index);
     }
   }, {
     key: "remove",
     value: function remove(index) {
-      cov_gt2jkfq85.f[6]++;
-      cov_gt2jkfq85.s[14]++;
+      cov_vcya34o2x.f[6]++;
+      cov_vcya34o2x.s[14]++;
 
       if (this.innerMap.has(index)) {
-        cov_gt2jkfq85.b[1][0]++;
-        cov_gt2jkfq85.s[15]++;
+        cov_vcya34o2x.b[1][0]++;
+        cov_vcya34o2x.s[15]++;
         this.innerMap.delete(index);
-        cov_gt2jkfq85.s[16]++;
+        cov_vcya34o2x.s[16]++;
         this.unusedIndexes[this.unusedIndexes.length] = index;
-        cov_gt2jkfq85.s[17]++;
+        cov_vcya34o2x.s[17]++;
         return true;
       } else {
-        cov_gt2jkfq85.b[1][1]++;
-        cov_gt2jkfq85.s[18]++;
+        cov_vcya34o2x.b[1][1]++;
+        cov_vcya34o2x.s[18]++;
         return false;
       }
     }
@@ -612,14 +612,14 @@ var _operationManager = require("./test/task/operation/operation-manager.test");
 },{"./test/collection/token-map.test":13,"./test/task/log-task-engine.test":17,"./test/task/operation/operation-manager.test":18}],3:[function(require,module,exports){
 "use strict";
 
-var cov_29nxnjf68 = function () {
-  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/task/flow/task-flow-when.js",
-      hash = "606188b43fd3cc499372ee6f4143b8d29d51729b",
+var cov_241f8i4s2y = function () {
+  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/task/flow/task-flow-when.js",
+      hash = "6e56d196634277ec1993d208cb2e78ee7b5e8bca",
       Function = function () {}.constructor,
       global = new Function('return this')(),
       gcv = "__coverage__",
       coverageData = {
-    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/task/flow/task-flow-when.js",
+    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/task/flow/task-flow-when.js",
     statementMap: {
       "0": {
         start: {
@@ -684,7 +684,7 @@ var cov_29nxnjf68 = function () {
       mappings: "AAiBA,MAAM,OAAgB,sBAAsB;IAexC,YAAmB,KAA8B,EAAE,cAAsB;QACrE,IAAI,CAAC,KAAK,GAAG,KAAK,CAAC;QACnB,IAAI,CAAC,cAAc,GAAG,cAAc,CAAC;IACzC,CAAC;CACJ",
       file: "task-flow-when.js",
       sourcesContent: ["/**\r\n * Constraint that determines the start of the task part.\r\n */\r\nexport interface ITaskPartWhenConstraint {\r\n    /**\r\n     * When entity to check once this constraint is ensured.\r\n     */\r\n    after: ITaskPartWhenConstraint;\r\n    /**\r\n     * Type of this constraint.\r\n     */\r\n    constraintType: string;\r\n}\r\n\r\n/**\r\n * Constraint that determines the start of the task part.\r\n */\r\nexport abstract class TaskPartWhenConstraint implements ITaskPartWhenConstraint {\r\n    /**\r\n     * When entity to check once this constraint is ensured.\r\n     */\r\n    public after: ITaskPartWhenConstraint;\r\n    /**\r\n     * Type of this constraint.\r\n     */\r\n    public constraintType: string;\r\n\r\n    /**\r\n     * Creates a new task part constraint.\r\n     * @param after Constraint to apply after this constraint is checked.\r\n     * @param constraintType Constraint type.\r\n     */\r\n    public constructor(after: ITaskPartWhenConstraint, constraintType: string) {\r\n        this.after = after;\r\n        this.constraintType = constraintType;\r\n    }\r\n}\r\n"],
-      sourceRoot: "../../../../../../src"
+      sourceRoot: "../../../../../../../src"
     },
     _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184"
   },
@@ -709,10 +709,10 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var TaskPartWhenConstraint = function TaskPartWhenConstraint(after, constraintType) {
   (0, _classCallCheck2.default)(this, TaskPartWhenConstraint);
-  cov_29nxnjf68.f[0]++;
-  cov_29nxnjf68.s[0]++;
+  cov_241f8i4s2y.f[0]++;
+  cov_241f8i4s2y.s[0]++;
   this.after = after;
-  cov_29nxnjf68.s[1]++;
+  cov_241f8i4s2y.s[1]++;
   this.constraintType = constraintType;
 };
 
@@ -721,14 +721,14 @@ exports.TaskPartWhenConstraint = TaskPartWhenConstraint;
 },{"@babel/runtime/helpers/classCallCheck":20,"@babel/runtime/helpers/interopRequireDefault":24}],4:[function(require,module,exports){
 "use strict";
 
-var cov_6ayqa3z6f = function () {
-  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/task/flow/task-part-begin-constraint.js",
-      hash = "11ee893f8180ba18211c3ee64d6a25799e138de3",
+var cov_1ql6m16a7m = function () {
+  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/task/flow/task-part-begin-constraint.js",
+      hash = "5dbc3732d712e9fe4a887495a1d66d54c6b400fa",
       Function = function () {}.constructor,
       global = new Function('return this')(),
       gcv = "__coverage__",
       coverageData = {
-    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/task/flow/task-part-begin-constraint.js",
+    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/task/flow/task-part-begin-constraint.js",
     statementMap: {
       "0": {
         start: {
@@ -782,7 +782,7 @@ var cov_6ayqa3z6f = function () {
       mappings: "AACA,OAAO,EACH,qBAAqB,EACrB,kBAAkB,GACrB,MAAM,wBAAwB,CAAC;AAKhC,MAAM,OAAO,uBAAwB,SAAQ,kBAAkB;IAC3D,YAAmB,KAA8B,EAAE,KAAa;QAC5D,KAAK,CAAC,KAAK,EAAE,KAAK,EAAE,qBAAqB,CAAC,KAAK,CAAC,CAAC;IACrD,CAAC;CACJ",
       file: "task-part-begin-constraint.js",
       sourcesContent: ["import { ITaskPartWhenConstraint } from './task-flow-when';\r\nimport {\r\n    TASK_CONSTRAINT_TYPES,\r\n    TaskPartConstraint,\r\n} from './task-part-constraint';\r\n\r\n/**\r\n * Represents a when constraint that is checked once a task part starts.\r\n */\r\nexport class TaskPartBeginConstraint extends TaskPartConstraint {\r\n    public constructor(after: ITaskPartWhenConstraint, alias: string) {\r\n        super(after, alias, TASK_CONSTRAINT_TYPES.START);\r\n    }\r\n}\r\n"],
-      sourceRoot: "../../../../../../src"
+      sourceRoot: "../../../../../../../src"
     },
     _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184"
   },
@@ -820,8 +820,8 @@ function (_TaskPartConstraint) {
 
   function TaskPartBeginConstraint(after, alias) {
     (0, _classCallCheck2.default)(this, TaskPartBeginConstraint);
-    cov_6ayqa3z6f.f[0]++;
-    cov_6ayqa3z6f.s[0]++;
+    cov_1ql6m16a7m.f[0]++;
+    cov_1ql6m16a7m.s[0]++;
     return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(TaskPartBeginConstraint).call(this, after, alias, _taskPartConstraint.TASK_CONSTRAINT_TYPES.START));
   }
 
@@ -833,14 +833,14 @@ exports.TaskPartBeginConstraint = TaskPartBeginConstraint;
 },{"./task-part-constraint":5,"@babel/runtime/helpers/classCallCheck":20,"@babel/runtime/helpers/getPrototypeOf":22,"@babel/runtime/helpers/inherits":23,"@babel/runtime/helpers/interopRequireDefault":24,"@babel/runtime/helpers/possibleConstructorReturn":25}],5:[function(require,module,exports){
 "use strict";
 
-var cov_16ydl7b50w = function () {
-  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/task/flow/task-part-constraint.js",
-      hash = "47dd35f6bdd449b65b9df81202e52a0c9767b575",
+var cov_1cxcjxaxvl = function () {
+  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/task/flow/task-part-constraint.js",
+      hash = "9740fc80f7aab359b313786a72ce74ebe17d4bc8",
       Function = function () {}.constructor,
       global = new Function('return this')(),
       gcv = "__coverage__",
       coverageData = {
-    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/task/flow/task-part-constraint.js",
+    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/task/flow/task-part-constraint.js",
     statementMap: {
       "0": {
         start: {
@@ -916,7 +916,7 @@ var cov_16ydl7b50w = function () {
       mappings: "AAAA,OAAO,EAEH,sBAAsB,GACzB,MAAM,kBAAkB,CAAC;AAK1B,MAAM,CAAC,MAAM,qBAAqB,GAAG;IAIjC,GAAG,EAAE,UAAU;IAIf,KAAK,EAAE,OAAO;IAId,KAAK,EAAG,YAAY;IAIpB,QAAQ,EAAE,MAAM;CACnB,CAAC;AAEF,MAAM,OAAgB,kBAAmB,SAAQ,sBAAsB;IAYnE,YAAmB,KAA8B,EAAE,KAAa,EAAE,cAAsB;QACpF,KAAK,CAAC,KAAK,EAAE,cAAc,CAAC,CAAC;QAE7B,IAAI,CAAC,KAAK,GAAG,KAAK,CAAC;IACvB,CAAC;CACJ",
       file: "task-part-constraint.js",
       sourcesContent: ["import {\r\n    ITaskPartWhenConstraint,\r\n    TaskPartWhenConstraint,\r\n} from './task-flow-when';\r\n\r\n/**\r\n * Task constraint types\r\n */\r\nexport const TASK_CONSTRAINT_TYPES = {\r\n    /**\r\n     * Requires the end of a task part.\r\n     */\r\n    END: 'anim.end',\r\n    /**\r\n     * Requires a group of constraints.\r\n     */\r\n    GROUP: 'group',\r\n    /**\r\n     * Requires the start of a task part.\r\n     */\r\n    START : 'anim.start',\r\n    /**\r\n     * Requires an amount of time.\r\n     */\r\n    WAIT_FOR: 'wait',\r\n};\r\n\r\nexport abstract class TaskPartConstraint extends TaskPartWhenConstraint {\r\n    /**\r\n     * Alias of the part affected by this constraint.\r\n     */\r\n    public alias: string;\r\n\r\n    /**\r\n     * Creates a new task part constraint.\r\n     * @param after Constraint to apply after this constraint is checked.\r\n     * @param alias Aliases of the parts affected by this constraint.\r\n     * @param constraintType Constraint type.\r\n     */\r\n    public constructor(after: ITaskPartWhenConstraint, alias: string, constraintType: string) {\r\n        super(after, constraintType);\r\n\r\n        this.alias = alias;\r\n    }\r\n}\r\n"],
-      sourceRoot: "../../../../../../src"
+      sourceRoot: "../../../../../../../src"
     },
     _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184"
   },
@@ -947,7 +947,7 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _taskFlowWhen = require("./task-flow-when");
 
-var TASK_CONSTRAINT_TYPES = (cov_16ydl7b50w.s[0]++, {
+var TASK_CONSTRAINT_TYPES = (cov_1cxcjxaxvl.s[0]++, {
   END: 'anim.end',
   GROUP: 'group',
   START: 'anim.start',
@@ -964,10 +964,10 @@ function (_TaskPartWhenConstrai) {
     var _this;
 
     (0, _classCallCheck2.default)(this, TaskPartConstraint);
-    cov_16ydl7b50w.f[0]++;
-    cov_16ydl7b50w.s[1]++;
+    cov_1cxcjxaxvl.f[0]++;
+    cov_1cxcjxaxvl.s[1]++;
     _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(TaskPartConstraint).call(this, after, constraintType));
-    cov_16ydl7b50w.s[2]++;
+    cov_1cxcjxaxvl.s[2]++;
     _this.alias = alias;
     return _this;
   }
@@ -980,14 +980,14 @@ exports.TaskPartConstraint = TaskPartConstraint;
 },{"./task-flow-when":3,"@babel/runtime/helpers/classCallCheck":20,"@babel/runtime/helpers/getPrototypeOf":22,"@babel/runtime/helpers/inherits":23,"@babel/runtime/helpers/interopRequireDefault":24,"@babel/runtime/helpers/possibleConstructorReturn":25}],6:[function(require,module,exports){
 "use strict";
 
-var cov_5a0g85rgl = function () {
-  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/task/flow/task-part-end-constraint.js",
-      hash = "5d8c6c2bd9420c8ac1fa0a8b7418fadb9dc57a9c",
+var cov_6k9rvmsob = function () {
+  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/task/flow/task-part-end-constraint.js",
+      hash = "6d6ba191cefa42f36ac41cc38035eb040eeaa256",
       Function = function () {}.constructor,
       global = new Function('return this')(),
       gcv = "__coverage__",
       coverageData = {
-    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/task/flow/task-part-end-constraint.js",
+    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/task/flow/task-part-end-constraint.js",
     statementMap: {
       "0": {
         start: {
@@ -1041,7 +1041,7 @@ var cov_5a0g85rgl = function () {
       mappings: "AACA,OAAO,EACH,qBAAqB,EACrB,kBAAkB,GACrB,MAAM,wBAAwB,CAAC;AAKhC,MAAM,OAAO,qBAAsB,SAAQ,kBAAkB;IACzD,YAAmB,KAA8B,EAAE,KAAa;QAC5D,KAAK,CAAC,KAAK,EAAE,KAAK,EAAE,qBAAqB,CAAC,GAAG,CAAC,CAAC;IACnD,CAAC;CACJ",
       file: "task-part-end-constraint.js",
       sourcesContent: ["import { ITaskPartWhenConstraint } from './task-flow-when';\r\nimport {\r\n    TASK_CONSTRAINT_TYPES,\r\n    TaskPartConstraint,\r\n} from './task-part-constraint';\r\n\r\n/**\r\n * Represents a when constraint that is checked once a task part ends.\r\n */\r\nexport class TaskPartEndConstraint extends TaskPartConstraint {\r\n    public constructor(after: ITaskPartWhenConstraint, alias: string) {\r\n        super(after, alias, TASK_CONSTRAINT_TYPES.END);\r\n    }\r\n}\r\n"],
-      sourceRoot: "../../../../../../src"
+      sourceRoot: "../../../../../../../src"
     },
     _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184"
   },
@@ -1079,8 +1079,8 @@ function (_TaskPartConstraint) {
 
   function TaskPartEndConstraint(after, alias) {
     (0, _classCallCheck2.default)(this, TaskPartEndConstraint);
-    cov_5a0g85rgl.f[0]++;
-    cov_5a0g85rgl.s[0]++;
+    cov_6k9rvmsob.f[0]++;
+    cov_6k9rvmsob.s[0]++;
     return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(TaskPartEndConstraint).call(this, after, alias, _taskPartConstraint.TASK_CONSTRAINT_TYPES.END));
   }
 
@@ -1092,14 +1092,14 @@ exports.TaskPartEndConstraint = TaskPartEndConstraint;
 },{"./task-part-constraint":5,"@babel/runtime/helpers/classCallCheck":20,"@babel/runtime/helpers/getPrototypeOf":22,"@babel/runtime/helpers/inherits":23,"@babel/runtime/helpers/interopRequireDefault":24,"@babel/runtime/helpers/possibleConstructorReturn":25}],7:[function(require,module,exports){
 "use strict";
 
-var cov_i6j3z86sj = function () {
-  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/task/flow/task-part-group-constraint.js",
-      hash = "bfe5353079a2c16fe6894e8c020b334190ebbc5a",
+var cov_1yyrhi8ef5 = function () {
+  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/task/flow/task-part-group-constraint.js",
+      hash = "2446abf0dbc154fb53a6048198e7777eebf3b131",
       Function = function () {}.constructor,
       global = new Function('return this')(),
       gcv = "__coverage__",
       coverageData = {
-    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/task/flow/task-part-group-constraint.js",
+    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/task/flow/task-part-group-constraint.js",
     statementMap: {
       "0": {
         start: {
@@ -1175,7 +1175,7 @@ var cov_i6j3z86sj = function () {
       mappings: "AACA,OAAO,EAEH,sBAAsB,GACzB,MAAM,kBAAkB,CAAC;AAC1B,OAAO,EAAE,qBAAqB,EAAE,MAAM,wBAAwB,CAAC;AAK/D,MAAM,OAAO,mBAAoB,SAAQ,sBAAsB;IAiB3D,YACI,KAA8B,EAC9B,WAAsC,EACtC,QAA8B;QAE9B,KAAK,CAAC,KAAK,EAAE,qBAAqB,CAAC,KAAK,CAAC,CAAC;QAE1C,IAAI,CAAC,WAAW,GAAG,WAAW,CAAC;QAC/B,IAAI,CAAC,QAAQ,GAAG,QAAQ,CAAC;IAC7B,CAAC;CACJ",
       file: "task-part-group-constraint.js",
       sourcesContent: ["import { TaskPartWhenOperator } from '../task-part-when-operator';\r\nimport {\r\n    ITaskPartWhenConstraint,\r\n    TaskPartWhenConstraint,\r\n} from './task-flow-when';\r\nimport { TASK_CONSTRAINT_TYPES } from './task-part-constraint';\r\n\r\n/**\r\n * Represents a when constraint that is checked once a group of constraints are checked.\r\n */\r\nexport class TaskGroupConstraint extends TaskPartWhenConstraint {\r\n    /**\r\n     * Constraints to ensure\r\n     */\r\n    public constraints: ITaskPartWhenConstraint[];\r\n    /**\r\n     * Logical operator\r\n     */\r\n    public operator: TaskPartWhenOperator;\r\n\r\n    /**\r\n     * Creates a new instance.\r\n     *\r\n     * @param after Constraint to check after all the constraitns of the group have successfully checked.\r\n     * @param constraints Group of constraints to check.\r\n     * @param operator Logical operator to apply.\r\n     */\r\n    public constructor(\r\n        after: ITaskPartWhenConstraint,\r\n        constraints: ITaskPartWhenConstraint[],\r\n        operator: TaskPartWhenOperator,\r\n    ) {\r\n        super(after, TASK_CONSTRAINT_TYPES.GROUP);\r\n\r\n        this.constraints = constraints;\r\n        this.operator = operator;\r\n    }\r\n}\r\n"],
-      sourceRoot: "../../../../../../src"
+      sourceRoot: "../../../../../../../src"
     },
     _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184"
   },
@@ -1217,12 +1217,12 @@ function (_TaskPartWhenConstrai) {
     var _this;
 
     (0, _classCallCheck2.default)(this, TaskGroupConstraint);
-    cov_i6j3z86sj.f[0]++;
-    cov_i6j3z86sj.s[0]++;
+    cov_1yyrhi8ef5.f[0]++;
+    cov_1yyrhi8ef5.s[0]++;
     _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(TaskGroupConstraint).call(this, after, _taskPartConstraint.TASK_CONSTRAINT_TYPES.GROUP));
-    cov_i6j3z86sj.s[1]++;
+    cov_1yyrhi8ef5.s[1]++;
     _this.constraints = constraints;
-    cov_i6j3z86sj.s[2]++;
+    cov_1yyrhi8ef5.s[2]++;
     _this.operator = operator;
     return _this;
   }
@@ -1235,14 +1235,14 @@ exports.TaskGroupConstraint = TaskGroupConstraint;
 },{"./task-flow-when":3,"./task-part-constraint":5,"@babel/runtime/helpers/classCallCheck":20,"@babel/runtime/helpers/getPrototypeOf":22,"@babel/runtime/helpers/inherits":23,"@babel/runtime/helpers/interopRequireDefault":24,"@babel/runtime/helpers/possibleConstructorReturn":25}],8:[function(require,module,exports){
 "use strict";
 
-var cov_tpcuavqwq = function () {
-  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/task/flow/task-part-time-constraint.js",
-      hash = "76246aa65838a001f21abdab451bb5aa3357ee7b",
+var cov_qvcf9l48r = function () {
+  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/task/flow/task-part-time-constraint.js",
+      hash = "160ba3257accd02f2910980f7455bbb9c31a68ce",
       Function = function () {}.constructor,
       global = new Function('return this')(),
       gcv = "__coverage__",
       coverageData = {
-    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/task/flow/task-part-time-constraint.js",
+    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/task/flow/task-part-time-constraint.js",
     statementMap: {
       "0": {
         start: {
@@ -1307,7 +1307,7 @@ var cov_tpcuavqwq = function () {
       mappings: "AAAA,OAAO,EAEH,sBAAsB,GACzB,MAAM,kBAAkB,CAAC;AAC1B,OAAO,EAAE,qBAAqB,EAAE,MAAM,wBAAwB,CAAC;AAK/D,MAAM,OAAO,kBAAmB,SAAQ,sBAAsB;IAM1D,YAAmB,KAA8B,EAAE,MAAc;QAC7D,KAAK,CAAC,KAAK,EAAE,qBAAqB,CAAC,QAAQ,CAAC,CAAC;QAC7C,IAAI,CAAC,MAAM,GAAG,MAAM,CAAC;IACzB,CAAC;CACJ",
       file: "task-part-time-constraint.js",
       sourcesContent: ["import {\r\n    ITaskPartWhenConstraint,\r\n    TaskPartWhenConstraint,\r\n} from './task-flow-when';\r\nimport { TASK_CONSTRAINT_TYPES } from './task-part-constraint';\r\n\r\n/**\r\n * Represents a when constraint that is checked once an amount of time passes.\r\n */\r\nexport class TaskTimeConstraint extends TaskPartWhenConstraint {\r\n    /**\r\n     * Milliseconds to wait.\r\n     */\r\n    public millis: number;\r\n\r\n    public constructor(after: ITaskPartWhenConstraint, millis: number) {\r\n        super(after, TASK_CONSTRAINT_TYPES.WAIT_FOR);\r\n        this.millis = millis;\r\n    }\r\n}\r\n"],
-      sourceRoot: "../../../../../../src"
+      sourceRoot: "../../../../../../../src"
     },
     _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184"
   },
@@ -1349,10 +1349,10 @@ function (_TaskPartWhenConstrai) {
     var _this;
 
     (0, _classCallCheck2.default)(this, TaskTimeConstraint);
-    cov_tpcuavqwq.f[0]++;
-    cov_tpcuavqwq.s[0]++;
+    cov_qvcf9l48r.f[0]++;
+    cov_qvcf9l48r.s[0]++;
     _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(TaskTimeConstraint).call(this, after, _taskPartConstraint.TASK_CONSTRAINT_TYPES.WAIT_FOR));
-    cov_tpcuavqwq.s[1]++;
+    cov_qvcf9l48r.s[1]++;
     _this.millis = millis;
     return _this;
   }
@@ -1365,14 +1365,14 @@ exports.TaskTimeConstraint = TaskTimeConstraint;
 },{"./task-flow-when":3,"./task-part-constraint":5,"@babel/runtime/helpers/classCallCheck":20,"@babel/runtime/helpers/getPrototypeOf":22,"@babel/runtime/helpers/inherits":23,"@babel/runtime/helpers/interopRequireDefault":24,"@babel/runtime/helpers/possibleConstructorReturn":25}],9:[function(require,module,exports){
 "use strict";
 
-var cov_85i66das2 = function () {
-  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/task/operation/operation-manager.js",
-      hash = "0c916af8df30a687125c5a4c33f0199189bb9bb4",
+var cov_1zshaznfks = function () {
+  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/task/operation/operation-manager.js",
+      hash = "2919c9c2e8bf05b21f9be7d2dfeb4f70e2821271",
       Function = function () {}.constructor,
       global = new Function('return this')(),
       gcv = "__coverage__",
       coverageData = {
-    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/task/operation/operation-manager.js",
+    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/task/operation/operation-manager.js",
     statementMap: {
       "0": {
         start: {
@@ -2046,7 +2046,7 @@ var cov_85i66das2 = function () {
       mappings: "AACA,OAAO,EAAE,QAAQ,EAAE,MAAM,4BAA4B,CAAC;AActD,MAAM,OAAO,gBAAgB;IA+BzB,YAAmB,UAAkB,EAAE,YAA0B;QAC7D,MAAM,IAAI,GAAG,IAAI,CAAC;QAClB,IAAI,CAAC,YAAY,GAAG,UAAS,SAAe;YACxC,IAAI,SAAS,CAAC,OAAO,IAAI,IAAI,EAAE;gBAC3B,KAAK,MAAM,KAAK,IAAI,IAAI,CAAC,mBAAmB,EAAE;oBAC1C,IAAI,IAAI,CAAC,mBAAmB,CAAC,cAAc,CAAC,KAAK,CAAC,EAAE;wBAChD,MAAM,WAAW,GAAG,IAAI,CAAC,mBAAmB,CAAC,KAAK,CAAC,CAAC;wBACpD,IAAI,WAAW,IAAI,IAAI,EAAE;4BACrB,WAAW,CAAC,OAAO,CAAC,UAAS,KAAgC;gCACzD,KAAK,CAAC,SAAS,CAAC,CAAC;4BACrB,CAAC,CAAC,CAAC;yBACN;qBACJ;iBACJ;aACJ;iBAAM;gBACH,KAAK,MAAM,KAAK,IAAI,SAAS,CAAC,OAAO,EAAE;oBACnC,MAAM,WAAW,GAAG,IAAI,CAAC,mBAAmB,CAAC,KAAK,CAAC,CAAC;oBACpD,IAAI,WAAW,IAAI,IAAI,EAAE;wBACrB,WAAW,CAAC,OAAO,CAAC,UAAS,KAAgC;4BACzD,KAAK,CAAC,SAAS,CAAC,CAAC;wBACrB,CAAC,CAAC,CAAC;qBACN;iBACJ;aACJ;QACL,CAAC,CAAC;QAEF,IAAI,CAAC,UAAU,GAAG,UAAU,CAAC;QAC7B,IAAI,CAAC,YAAY,GAAG,YAAY,CAAC;QACjC,IAAI,CAAC,mBAAmB,GAAG,EAAE,CAAC;QAE9B,IAAI,CAAC,YAAY,CAAC,WAAW,CAAC,IAAI,CAAC,UAAU,EAAE,IAAI,CAAC,YAAY,CAAC,CAAC;IACtE,CAAC;IAKM,OAAO;QACV,IAAI,CAAC,YAAY,CAAC,cAAc,CAAC,IAAI,CAAC,UAAU,EAAE,IAAI,CAAC,YAAY,CAAC,CAAC;IACzE,CAAC;IAOM,SAAS,CAAC,KAAa,EAAE,OAAkC;QAC9D,IAAI,IAAI,IAAI,IAAI,CAAC,mBAAmB,CAAC,KAAK,CAAC,EAAE;YACzC,IAAI,CAAC,mBAAmB,CAAC,KAAK,CAAC,GAAG,IAAI,QAAQ,EAAE,CAAC;SACpD;QACD,OAAO,IAAI,CAAC,mBAAmB,CAAC,KAAK,CAAC,CAAC,GAAG,CAAC,OAAO,CAAC,CAAC;IACxD,CAAC;IAOM,WAAW,CAAC,KAAa,EAAE,KAAa;QAC3C,IAAI,IAAI,IAAI,IAAI,CAAC,mBAAmB,CAAC,KAAK,CAAC,EAAE;YACzC,OAAO,KAAK,CAAC;SAChB;aAAM;YACH,OAAO,IAAI,CAAC,mBAAmB,CAAC,KAAK,CAAC,CAAC,MAAM,CAAC,KAAK,CAAC,CAAC;SACxD;IACL,CAAC;CACJ",
       file: "operation-manager.js",
       sourcesContent: ["import { EventEmitter } from 'events';\r\nimport { TokenMap } from '../../collection/token-map';\r\nimport { IOperationManagerAccess } from './operation-manager-access';\r\n\r\n/**\r\n * Operation arguments\r\n */\r\nexport interface IOperationArgs {\r\n    aliases: string[];\r\n}\r\n\r\n/**\r\n * Represents an operation manager. The operation is propagated using an event.\r\n * All the subscribers\r\n */\r\nexport class OperationManager<Args extends IOperationArgs> implements IOperationManagerAccess<Args> {\r\n\r\n    //#region Attributes\r\n\r\n    /**\r\n     * Function to be called to handle the event.\r\n     */\r\n    protected callFunction: (eventArgs: Args) => void;\r\n\r\n    /**\r\n     * Alias of the event.\r\n     */\r\n    protected eventAlias: string;\r\n\r\n    /**\r\n     * Event emmitter of the event.\r\n     */\r\n    protected eventEmitter: EventEmitter;\r\n\r\n    /**\r\n     * Object to storage all the functions subscribed.\r\n     */\r\n    protected subscriptionStorage: { [alias: string]: TokenMap<(eventArgs: Args) => void> };\r\n\r\n    //#endregion\r\n\r\n    /**\r\n     * Creates a new operation manager\r\n     * @param eventAlias Event alias.\r\n     * @param eventEmitter Event emitter.\r\n     */\r\n    public constructor(eventAlias: string, eventEmitter: EventEmitter) {\r\n        const that = this;\r\n        this.callFunction = function(eventArgs: Args): void {\r\n            if (eventArgs.aliases == null) {\r\n                for (const alias in that.subscriptionStorage) {\r\n                    if (that.subscriptionStorage.hasOwnProperty(alias)) {\r\n                        const subscribers = that.subscriptionStorage[alias];\r\n                        if (subscribers != null) {\r\n                            subscribers.foreach(function(value: (eventArgs: Args) => void) {\r\n                                value(eventArgs);\r\n                            });\r\n                        }\r\n                    }\r\n                }\r\n            } else {\r\n                for (const alias of eventArgs.aliases) {\r\n                    const subscribers = that.subscriptionStorage[alias];\r\n                    if (subscribers != null) {\r\n                        subscribers.foreach(function(value: (eventArgs: Args) => void) {\r\n                            value(eventArgs);\r\n                        });\r\n                    }\r\n                }\r\n            }\r\n        };\r\n\r\n        this.eventAlias = eventAlias;\r\n        this.eventEmitter = eventEmitter;\r\n        this.subscriptionStorage = {};\r\n\r\n        this.eventEmitter.addListener(this.eventAlias, this.callFunction);\r\n    }\r\n\r\n    /**\r\n     * Disposes the instance.\r\n     */\r\n    public dispose(): void {\r\n        this.eventEmitter.removeListener(this.eventAlias, this.callFunction);\r\n    }\r\n\r\n    /**\r\n     * Substribes a handler under an alias.\r\n     * @param alias Alias of the handler.\r\n     * @param handler Handler to be subscribed.\r\n     */\r\n    public subscribe(alias: string, handler: (eventArgs: Args) => void): number {\r\n        if (null == this.subscriptionStorage[alias]) {\r\n            this.subscriptionStorage[alias] = new TokenMap();\r\n        }\r\n        return this.subscriptionStorage[alias].add(handler);\r\n    }\r\n\r\n    /**\r\n     * Unsubscribes a handler under an alias.\r\n     * @param alias Alias of the handler.\r\n     * @param index Index of the handler.\r\n     */\r\n    public unsubscribe(alias: string, index: number): boolean {\r\n        if (null == this.subscriptionStorage[alias]) {\r\n            return false;\r\n        } else {\r\n            return this.subscriptionStorage[alias].remove(index);\r\n        }\r\n    }\r\n}\r\n"],
-      sourceRoot: "../../../../../../src"
+      sourceRoot: "../../../../../../../src"
     },
     _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184"
   },
@@ -2078,44 +2078,44 @@ var OperationManager =
 function () {
   function OperationManager(eventAlias, eventEmitter) {
     (0, _classCallCheck2.default)(this, OperationManager);
-    cov_85i66das2.f[0]++;
-    var that = (cov_85i66das2.s[0]++, this);
-    cov_85i66das2.s[1]++;
+    cov_1zshaznfks.f[0]++;
+    var that = (cov_1zshaznfks.s[0]++, this);
+    cov_1zshaznfks.s[1]++;
 
     this.callFunction = function (eventArgs) {
-      cov_85i66das2.f[1]++;
-      cov_85i66das2.s[2]++;
+      cov_1zshaznfks.f[1]++;
+      cov_1zshaznfks.s[2]++;
 
       if (eventArgs.aliases == null) {
-        cov_85i66das2.b[0][0]++;
-        cov_85i66das2.s[3]++;
+        cov_1zshaznfks.b[0][0]++;
+        cov_1zshaznfks.s[3]++;
 
         for (var alias in that.subscriptionStorage) {
-          cov_85i66das2.s[4]++;
+          cov_1zshaznfks.s[4]++;
 
           if (that.subscriptionStorage.hasOwnProperty(alias)) {
-            cov_85i66das2.b[1][0]++;
-            var subscribers = (cov_85i66das2.s[5]++, that.subscriptionStorage[alias]);
-            cov_85i66das2.s[6]++;
+            cov_1zshaznfks.b[1][0]++;
+            var subscribers = (cov_1zshaznfks.s[5]++, that.subscriptionStorage[alias]);
+            cov_1zshaznfks.s[6]++;
 
             if (subscribers != null) {
-              cov_85i66das2.b[2][0]++;
-              cov_85i66das2.s[7]++;
+              cov_1zshaznfks.b[2][0]++;
+              cov_1zshaznfks.s[7]++;
               subscribers.foreach(function (value) {
-                cov_85i66das2.f[2]++;
-                cov_85i66das2.s[8]++;
+                cov_1zshaznfks.f[2]++;
+                cov_1zshaznfks.s[8]++;
                 value(eventArgs);
               });
             } else {
-              cov_85i66das2.b[2][1]++;
+              cov_1zshaznfks.b[2][1]++;
             }
           } else {
-            cov_85i66das2.b[1][1]++;
+            cov_1zshaznfks.b[1][1]++;
           }
         }
       } else {
-        cov_85i66das2.b[0][1]++;
-        cov_85i66das2.s[9]++;
+        cov_1zshaznfks.b[0][1]++;
+        cov_1zshaznfks.s[9]++;
         var _iteratorNormalCompletion = true;
         var _didIteratorError = false;
         var _iteratorError = undefined;
@@ -2124,21 +2124,21 @@ function () {
           for (var _iterator = eventArgs.aliases[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
             var _alias = _step.value;
 
-            var _subscribers = (cov_85i66das2.s[10]++, that.subscriptionStorage[_alias]);
+            var _subscribers = (cov_1zshaznfks.s[10]++, that.subscriptionStorage[_alias]);
 
-            cov_85i66das2.s[11]++;
+            cov_1zshaznfks.s[11]++;
 
             if (_subscribers != null) {
-              cov_85i66das2.b[3][0]++;
-              cov_85i66das2.s[12]++;
+              cov_1zshaznfks.b[3][0]++;
+              cov_1zshaznfks.s[12]++;
 
               _subscribers.foreach(function (value) {
-                cov_85i66das2.f[3]++;
-                cov_85i66das2.s[13]++;
+                cov_1zshaznfks.f[3]++;
+                cov_1zshaznfks.s[13]++;
                 value(eventArgs);
               });
             } else {
-              cov_85i66das2.b[3][1]++;
+              cov_1zshaznfks.b[3][1]++;
             }
           }
         } catch (err) {
@@ -2158,53 +2158,53 @@ function () {
       }
     };
 
-    cov_85i66das2.s[14]++;
+    cov_1zshaznfks.s[14]++;
     this.eventAlias = eventAlias;
-    cov_85i66das2.s[15]++;
+    cov_1zshaznfks.s[15]++;
     this.eventEmitter = eventEmitter;
-    cov_85i66das2.s[16]++;
+    cov_1zshaznfks.s[16]++;
     this.subscriptionStorage = {};
-    cov_85i66das2.s[17]++;
+    cov_1zshaznfks.s[17]++;
     this.eventEmitter.addListener(this.eventAlias, this.callFunction);
   }
 
   (0, _createClass2.default)(OperationManager, [{
     key: "dispose",
     value: function dispose() {
-      cov_85i66das2.f[4]++;
-      cov_85i66das2.s[18]++;
+      cov_1zshaznfks.f[4]++;
+      cov_1zshaznfks.s[18]++;
       this.eventEmitter.removeListener(this.eventAlias, this.callFunction);
     }
   }, {
     key: "subscribe",
     value: function subscribe(alias, handler) {
-      cov_85i66das2.f[5]++;
-      cov_85i66das2.s[19]++;
+      cov_1zshaznfks.f[5]++;
+      cov_1zshaznfks.s[19]++;
 
       if (null == this.subscriptionStorage[alias]) {
-        cov_85i66das2.b[4][0]++;
-        cov_85i66das2.s[20]++;
+        cov_1zshaznfks.b[4][0]++;
+        cov_1zshaznfks.s[20]++;
         this.subscriptionStorage[alias] = new _tokenMap.TokenMap();
       } else {
-        cov_85i66das2.b[4][1]++;
+        cov_1zshaznfks.b[4][1]++;
       }
 
-      cov_85i66das2.s[21]++;
+      cov_1zshaznfks.s[21]++;
       return this.subscriptionStorage[alias].add(handler);
     }
   }, {
     key: "unsubscribe",
     value: function unsubscribe(alias, index) {
-      cov_85i66das2.f[6]++;
-      cov_85i66das2.s[22]++;
+      cov_1zshaznfks.f[6]++;
+      cov_1zshaznfks.s[22]++;
 
       if (null == this.subscriptionStorage[alias]) {
-        cov_85i66das2.b[5][0]++;
-        cov_85i66das2.s[23]++;
+        cov_1zshaznfks.b[5][0]++;
+        cov_1zshaznfks.s[23]++;
         return false;
       } else {
-        cov_85i66das2.b[5][1]++;
-        cov_85i66das2.s[24]++;
+        cov_1zshaznfks.b[5][1]++;
+        cov_1zshaznfks.s[24]++;
         return this.subscriptionStorage[alias].remove(index);
       }
     }
@@ -2217,14 +2217,14 @@ exports.OperationManager = OperationManager;
 },{"../../collection/token-map":1,"@babel/runtime/helpers/classCallCheck":20,"@babel/runtime/helpers/createClass":21,"@babel/runtime/helpers/interopRequireDefault":24}],10:[function(require,module,exports){
 "use strict";
 
-var cov_voe4c53pm = function () {
-  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/task/task-engine.js",
-      hash = "de1e9da05c176ed96aff9b0d8f91d3c03a4628d1",
+var cov_2mku5qsxy1 = function () {
+  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/task/task-engine.js",
+      hash = "59e90d18533494bd0ff64b638ef4fd5864ad758d",
       Function = function () {}.constructor,
       global = new Function('return this')(),
       gcv = "__coverage__",
       coverageData = {
-    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/task/task-engine.js",
+    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/task/task-engine.js",
     statementMap: {
       "0": {
         start: {
@@ -4160,7 +4160,7 @@ var cov_voe4c53pm = function () {
       mappings: "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",
       file: "task-engine.js",
       sourcesContent: ["import { EventEmitter } from 'events';\r\nimport { ITaskFlow } from './flow/task-flow';\r\nimport { ITaskFlowPart } from './flow/task-flow-part';\r\nimport {\r\n    ITaskFlowPartEndArgs,\r\n    ITaskFlowPartStartArgs,\r\n} from './flow/task-flow-part-event-args';\r\nimport { ITaskPartWhenConstraint } from './flow/task-flow-when';\r\nimport { TaskPartBeginConstraint } from './flow/task-part-begin-constraint';\r\nimport { TASK_CONSTRAINT_TYPES } from './flow/task-part-constraint';\r\nimport { TaskPartEndConstraint } from './flow/task-part-end-constraint';\r\nimport { TaskGroupConstraint } from './flow/task-part-group-constraint';\r\nimport { TaskTimeConstraint } from './flow/task-part-time-constraint';\r\nimport { OperationManager } from './operation/operation-manager';\r\nimport { IOperationManagerAccess } from './operation/operation-manager-access';\r\nimport { TASK_PART_WHEN_EVENTS } from './task-part-when-events';\r\nimport { TaskPartWhenOperator } from './task-part-when-operator';\r\n\r\n/**\r\n * Represents a task engine.\r\n */\r\nexport abstract class TaskEngine<TPart extends ITaskFlowPart> {\r\n    //#region Attributes\r\n\r\n    /**\r\n     * Task currently managed.\r\n     */\r\n    protected currentTask: ITaskFlow<TPart>;\r\n\r\n    /**\r\n     * Event emitter to use\r\n     */\r\n    protected eventEmitter: EventEmitter;\r\n\r\n    //#region Operations\r\n\r\n    /**\r\n     * Manager that handles the part end event.\r\n     */\r\n    protected partEndManager: OperationManager<ITaskFlowPartEndArgs<TPart>>;\r\n\r\n    /**\r\n     * Manager that handles the part start event.\r\n     */\r\n    protected partStartManager: OperationManager<ITaskFlowPartStartArgs<TPart>>;\r\n\r\n    //#endregion\r\n\r\n    //#endregion\r\n\r\n    //#region Public\r\n\r\n    /**\r\n     * Creates a new instance.\r\n     */\r\n    public constructor() {\r\n        this.eventEmitter = new EventEmitter();\r\n\r\n        this.partEndManager = new OperationManager<ITaskFlowPartEndArgs<TPart>>(\r\n            TASK_PART_WHEN_EVENTS.END,\r\n            this.eventEmitter,\r\n        );\r\n        this.partStartManager = new OperationManager<ITaskFlowPartStartArgs<TPart>>(\r\n            TASK_PART_WHEN_EVENTS.START,\r\n            this.eventEmitter,\r\n        );\r\n    }\r\n\r\n    /**\r\n     * Obtains the access of the part end event.\r\n     * @returns Access of the part end event.\r\n     */\r\n    public getPartEndListenerAccess(): IOperationManagerAccess<ITaskFlowPartEndArgs<TPart>> {\r\n        const that = this;\r\n        return {\r\n            subscribe: function(\r\n                alias: string,\r\n                handler: (eventArgs: ITaskFlowPartEndArgs<TPart>) => void,\r\n            ): number {\r\n                return that.partEndManager.subscribe(alias, handler);\r\n            },\r\n            unsubscribe: function(alias: string, index: number): boolean {\r\n                return that.partEndManager.unsubscribe(alias, index);\r\n            },\r\n        };\r\n    }\r\n\r\n    /**\r\n     * Obtains the access of the part start event.\r\n     * @returns Access of the part start event.\r\n     */\r\n    public getPartStartListenerAccess(): IOperationManagerAccess<ITaskFlowPartStartArgs<TPart>> {\r\n        const that = this;\r\n        return {\r\n            subscribe: function(\r\n                alias: string,\r\n                handler: (eventArgs: ITaskFlowPartStartArgs<TPart>) => void,\r\n            ): number {\r\n                return that.partStartManager.subscribe(alias, handler);\r\n            },\r\n            unsubscribe: function(alias: string, index: number): boolean {\r\n                return that.partStartManager.unsubscribe(alias, index);\r\n            },\r\n        };\r\n    }\r\n\r\n    /**\r\n     * Handles a task flow.\r\n     * @param taskFlow Task flow to be managed.\r\n     * @returns Task part promises.\r\n     */\r\n    public handle(taskFlow: ITaskFlow<TPart>): Array<Promise<void>> {\r\n        if (taskFlow == null) {\r\n            throw new Error('It\\'s required a task flow.');\r\n        }\r\n        if (taskFlow.parts == null) {\r\n            throw new Error('It\\'s required a task flow with parts.');\r\n        }\r\n\r\n        this.currentTask = taskFlow;\r\n        const partPromises: Array<Promise<void>> = new Array(taskFlow.parts.length);\r\n\r\n        for (var i = 0; i < taskFlow.parts.length; ++i) {\r\n            partPromises[i] = this.handleTaskPart(taskFlow.parts[i]);\r\n        }\r\n\r\n        return partPromises;\r\n    }\r\n\r\n    //#endregion\r\n\r\n    /**\r\n     * Handles a task part.\r\n     *\r\n     * @param part Task part to handle.\r\n     *\r\n     * @returns Promise resolved once the part of the task is finished.\r\n     */\r\n    protected handleTaskPart(part: TPart): Promise<void> {\r\n        const that = this;\r\n\r\n        return new Promise<void>(function(resolve, reject) {\r\n            that.handleTaskPartWhen(part.when).then(function() {\r\n                // 1. Emit the start of task part.\r\n                that.eventEmitter.emit(\r\n                    TASK_PART_WHEN_EVENTS.START,\r\n                    {\r\n                        aliases: [part.alias],\r\n                        part: part,\r\n                    } as ITaskFlowPartStartArgs<TPart>,\r\n                );\r\n\r\n                const promise: PromiseLike<{} | void> = that.performTask(part);\r\n\r\n                promise.then(function() {\r\n                    // 3. Emit the end of the task part and resolve the promise.\r\n                    that.eventEmitter.emit(\r\n                        TASK_PART_WHEN_EVENTS.END,\r\n                        {\r\n                            aliases: [part.alias],\r\n                            part: part,\r\n                        } as ITaskFlowPartEndArgs<TPart>,\r\n                    );\r\n                    resolve();\r\n                });\r\n            }).catch(function(err: any) {\r\n                reject(err);\r\n            });\r\n        });\r\n    }\r\n\r\n    /**\r\n     * Performs a task part.\r\n     * @param part Task part to be performed.\r\n     * @returns Promise resolved once the part task is performed.\r\n     */\r\n    protected abstract performTask(part: TPart): PromiseLike<{} | void>;\r\n\r\n    //#region TaskPartWhenconstraint\r\n\r\n    /**\r\n     * Handles the when entity of a task part.\r\n     *\r\n     * @param whenEntity When entity to handle.\r\n     *\r\n     * @returns Promise resolved once the when entity is checked.\r\n     */\r\n    protected handleTaskPartWhen(whenEntity: ITaskPartWhenConstraint): Promise<void> {\r\n        const that = this;\r\n        return new Promise<void>(function(resolve, reject) {\r\n            if (null == whenEntity) {\r\n                resolve();\r\n            } else {\r\n                switch (whenEntity.constraintType) {\r\n                    case TASK_CONSTRAINT_TYPES.START:\r\n                        that.handleTaskPartWhenPartBegins(whenEntity as TaskPartBeginConstraint)\r\n                            .then(resolve);\r\n                        break;\r\n                    case TASK_CONSTRAINT_TYPES.END:\r\n                        that.handleTaskPartWhenPartEnds(whenEntity as TaskPartEndConstraint)\r\n                            .then(resolve);\r\n                        break;\r\n                    case TASK_CONSTRAINT_TYPES.GROUP:\r\n                        that.handleTaskPartWhenPartGroup(whenEntity as TaskGroupConstraint)\r\n                            .then(resolve);\r\n                        break;\r\n                    case TASK_CONSTRAINT_TYPES.WAIT_FOR:\r\n                        that.handleTaskPartWhenWaitFor(whenEntity as TaskTimeConstraint)\r\n                            .then(resolve);\r\n                        break;\r\n                    default:\r\n                        reject(new Error('Unexpected when entity type.'));\r\n                }\r\n            }\r\n        });\r\n    }\r\n\r\n    /**\r\n     * Handles the when entity (TaskPartBeginConstraint) of a task part.\r\n     *\r\n     * @param whenEntity When entity to handle.\r\n     * @returns Promise resolved once the when entity is checked.\r\n     */\r\n    protected handleTaskPartWhenPartBegins(whenEntity: TaskPartBeginConstraint): Promise<void> {\r\n        const that = this;\r\n        return new Promise<void>(function(resolve, reject) {\r\n            const eventHandler = function() {\r\n                that.partStartManager.unsubscribe(whenEntity.alias, token);\r\n                if (null == whenEntity.after) {\r\n                    resolve();\r\n                } else {\r\n                    that.handleTaskPartWhen(whenEntity.after)\r\n                        .then(resolve);\r\n                }\r\n            };\r\n            const token: number = that.partStartManager.subscribe(whenEntity.alias, eventHandler);\r\n        });\r\n    }\r\n\r\n    /**\r\n     * Handles the when entity (TaskPartEndConstraint) of a task part.\r\n     *\r\n     * @param whenEntity When entity to handle.\r\n     * @returns Promise resolved once the when entity is checked.\r\n     */\r\n    protected handleTaskPartWhenPartEnds(whenEntity: TaskPartEndConstraint): Promise<void> {\r\n        const that = this;\r\n        return new Promise<void>(function(resolve, reject) {\r\n            const eventHandler = function() {\r\n                that.partEndManager.unsubscribe(whenEntity.alias, token);\r\n                if (null == whenEntity.after) {\r\n                    resolve();\r\n                } else {\r\n                    that.handleTaskPartWhen(whenEntity.after)\r\n                        .then(resolve);\r\n                }\r\n            };\r\n            const token: number = that.partEndManager.subscribe(whenEntity.alias, eventHandler);\r\n        });\r\n    }\r\n\r\n    /**\r\n     * Handles the when entity (TaskGroupConstraint) of a task part.\r\n     *\r\n     * @param whenEntity When entity to handle.\r\n     *\r\n     * @returns Promise resolved once the when entity is checked.\r\n     */\r\n    protected handleTaskPartWhenPartGroup(whenEntity: TaskGroupConstraint): Promise<void> {\r\n        const that = this;\r\n        return new Promise<void>(function(resolve, reject) {\r\n            const childPromises: Array<Promise<void>> = new Array(whenEntity.constraints.length);\r\n\r\n            for (var i = 0; i < whenEntity.constraints.length; ++i) {\r\n                childPromises[i] = new Promise<void>(function(resolve, reject) {\r\n                    that.handleTaskPartWhen(whenEntity.constraints[i])\r\n                        .then(resolve);\r\n                });\r\n            }\r\n\r\n            if (TaskPartWhenOperator.AND === whenEntity.operator) {\r\n                Promise.all(childPromises)\r\n                    .then(function() {\r\n                        resolve();\r\n                    });\r\n            } else if (TaskPartWhenOperator.OR === whenEntity.operator) {\r\n                Promise.race(childPromises)\r\n                .then(function() {\r\n                    resolve();\r\n                });\r\n            } else {\r\n                reject('Unexpected operator.');\r\n            }\r\n        });\r\n    }\r\n\r\n    /**\r\n     * Handles the when entity (TaskTimeConstraint) of a task part.\r\n     *\r\n     * @param whenEntity When entity to handle.\r\n     *\r\n     * @returns Promise resolved once the when entity is checked.\r\n     */\r\n    protected handleTaskPartWhenWaitFor(whenEntity: TaskTimeConstraint): Promise<void> {\r\n        const that = this;\r\n        return new Promise<void>(function(resolve, reject) {\r\n            setTimeout(function() {\r\n                if (whenEntity.after == null) {\r\n                    resolve();\r\n                } else {\r\n                    that.handleTaskPartWhen(whenEntity.after)\r\n                        .then(resolve);\r\n                }\r\n            }, whenEntity.millis);\r\n        });\r\n    }\r\n\r\n    //#endregion\r\n}\r\n"],
-      sourceRoot: "../../../../../src"
+      sourceRoot: "../../../../../../src"
     },
     _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184"
   },
@@ -4200,30 +4200,30 @@ var TaskEngine =
 function () {
   function TaskEngine() {
     (0, _classCallCheck2.default)(this, TaskEngine);
-    cov_voe4c53pm.f[0]++;
-    cov_voe4c53pm.s[0]++;
+    cov_2mku5qsxy1.f[0]++;
+    cov_2mku5qsxy1.s[0]++;
     this.eventEmitter = new _events.EventEmitter();
-    cov_voe4c53pm.s[1]++;
+    cov_2mku5qsxy1.s[1]++;
     this.partEndManager = new _operationManager.OperationManager(_taskPartWhenEvents.TASK_PART_WHEN_EVENTS.END, this.eventEmitter);
-    cov_voe4c53pm.s[2]++;
+    cov_2mku5qsxy1.s[2]++;
     this.partStartManager = new _operationManager.OperationManager(_taskPartWhenEvents.TASK_PART_WHEN_EVENTS.START, this.eventEmitter);
   }
 
   (0, _createClass2.default)(TaskEngine, [{
     key: "getPartEndListenerAccess",
     value: function getPartEndListenerAccess() {
-      cov_voe4c53pm.f[1]++;
-      var that = (cov_voe4c53pm.s[3]++, this);
-      cov_voe4c53pm.s[4]++;
+      cov_2mku5qsxy1.f[1]++;
+      var that = (cov_2mku5qsxy1.s[3]++, this);
+      cov_2mku5qsxy1.s[4]++;
       return {
         subscribe: function subscribe(alias, handler) {
-          cov_voe4c53pm.f[2]++;
-          cov_voe4c53pm.s[5]++;
+          cov_2mku5qsxy1.f[2]++;
+          cov_2mku5qsxy1.s[5]++;
           return that.partEndManager.subscribe(alias, handler);
         },
         unsubscribe: function unsubscribe(alias, index) {
-          cov_voe4c53pm.f[3]++;
-          cov_voe4c53pm.s[6]++;
+          cov_2mku5qsxy1.f[3]++;
+          cov_2mku5qsxy1.s[6]++;
           return that.partEndManager.unsubscribe(alias, index);
         }
       };
@@ -4231,18 +4231,18 @@ function () {
   }, {
     key: "getPartStartListenerAccess",
     value: function getPartStartListenerAccess() {
-      cov_voe4c53pm.f[4]++;
-      var that = (cov_voe4c53pm.s[7]++, this);
-      cov_voe4c53pm.s[8]++;
+      cov_2mku5qsxy1.f[4]++;
+      var that = (cov_2mku5qsxy1.s[7]++, this);
+      cov_2mku5qsxy1.s[8]++;
       return {
         subscribe: function subscribe(alias, handler) {
-          cov_voe4c53pm.f[5]++;
-          cov_voe4c53pm.s[9]++;
+          cov_2mku5qsxy1.f[5]++;
+          cov_2mku5qsxy1.s[9]++;
           return that.partStartManager.subscribe(alias, handler);
         },
         unsubscribe: function unsubscribe(alias, index) {
-          cov_voe4c53pm.f[6]++;
-          cov_voe4c53pm.s[10]++;
+          cov_2mku5qsxy1.f[6]++;
+          cov_2mku5qsxy1.s[10]++;
           return that.partStartManager.unsubscribe(alias, index);
         }
       };
@@ -4250,71 +4250,71 @@ function () {
   }, {
     key: "handle",
     value: function handle(taskFlow) {
-      cov_voe4c53pm.f[7]++;
-      cov_voe4c53pm.s[11]++;
+      cov_2mku5qsxy1.f[7]++;
+      cov_2mku5qsxy1.s[11]++;
 
       if (taskFlow == null) {
-        cov_voe4c53pm.b[0][0]++;
-        cov_voe4c53pm.s[12]++;
+        cov_2mku5qsxy1.b[0][0]++;
+        cov_2mku5qsxy1.s[12]++;
         throw new Error('It\'s required a task flow.');
       } else {
-        cov_voe4c53pm.b[0][1]++;
+        cov_2mku5qsxy1.b[0][1]++;
       }
 
-      cov_voe4c53pm.s[13]++;
+      cov_2mku5qsxy1.s[13]++;
 
       if (taskFlow.parts == null) {
-        cov_voe4c53pm.b[1][0]++;
-        cov_voe4c53pm.s[14]++;
+        cov_2mku5qsxy1.b[1][0]++;
+        cov_2mku5qsxy1.s[14]++;
         throw new Error('It\'s required a task flow with parts.');
       } else {
-        cov_voe4c53pm.b[1][1]++;
+        cov_2mku5qsxy1.b[1][1]++;
       }
 
-      cov_voe4c53pm.s[15]++;
+      cov_2mku5qsxy1.s[15]++;
       this.currentTask = taskFlow;
-      var partPromises = (cov_voe4c53pm.s[16]++, new Array(taskFlow.parts.length));
-      cov_voe4c53pm.s[17]++;
+      var partPromises = (cov_2mku5qsxy1.s[16]++, new Array(taskFlow.parts.length));
+      cov_2mku5qsxy1.s[17]++;
 
       for (var i = 0; i < taskFlow.parts.length; ++i) {
-        cov_voe4c53pm.s[18]++;
+        cov_2mku5qsxy1.s[18]++;
         partPromises[i] = this.handleTaskPart(taskFlow.parts[i]);
       }
 
-      cov_voe4c53pm.s[19]++;
+      cov_2mku5qsxy1.s[19]++;
       return partPromises;
     }
   }, {
     key: "handleTaskPart",
     value: function handleTaskPart(part) {
-      cov_voe4c53pm.f[8]++;
-      var that = (cov_voe4c53pm.s[20]++, this);
-      cov_voe4c53pm.s[21]++;
+      cov_2mku5qsxy1.f[8]++;
+      var that = (cov_2mku5qsxy1.s[20]++, this);
+      cov_2mku5qsxy1.s[21]++;
       return new Promise(function (resolve, reject) {
-        cov_voe4c53pm.f[9]++;
-        cov_voe4c53pm.s[22]++;
+        cov_2mku5qsxy1.f[9]++;
+        cov_2mku5qsxy1.s[22]++;
         that.handleTaskPartWhen(part.when).then(function () {
-          cov_voe4c53pm.f[10]++;
-          cov_voe4c53pm.s[23]++;
+          cov_2mku5qsxy1.f[10]++;
+          cov_2mku5qsxy1.s[23]++;
           that.eventEmitter.emit(_taskPartWhenEvents.TASK_PART_WHEN_EVENTS.START, {
             aliases: [part.alias],
             part: part
           });
-          var promise = (cov_voe4c53pm.s[24]++, that.performTask(part));
-          cov_voe4c53pm.s[25]++;
+          var promise = (cov_2mku5qsxy1.s[24]++, that.performTask(part));
+          cov_2mku5qsxy1.s[25]++;
           promise.then(function () {
-            cov_voe4c53pm.f[11]++;
-            cov_voe4c53pm.s[26]++;
+            cov_2mku5qsxy1.f[11]++;
+            cov_2mku5qsxy1.s[26]++;
             that.eventEmitter.emit(_taskPartWhenEvents.TASK_PART_WHEN_EVENTS.END, {
               aliases: [part.alias],
               part: part
             });
-            cov_voe4c53pm.s[27]++;
+            cov_2mku5qsxy1.s[27]++;
             resolve();
           });
         }).catch(function (err) {
-          cov_voe4c53pm.f[12]++;
-          cov_voe4c53pm.s[28]++;
+          cov_2mku5qsxy1.f[12]++;
+          cov_2mku5qsxy1.s[28]++;
           reject(err);
         });
       });
@@ -4322,53 +4322,53 @@ function () {
   }, {
     key: "handleTaskPartWhen",
     value: function handleTaskPartWhen(whenEntity) {
-      cov_voe4c53pm.f[13]++;
-      var that = (cov_voe4c53pm.s[29]++, this);
-      cov_voe4c53pm.s[30]++;
+      cov_2mku5qsxy1.f[13]++;
+      var that = (cov_2mku5qsxy1.s[29]++, this);
+      cov_2mku5qsxy1.s[30]++;
       return new Promise(function (resolve, reject) {
-        cov_voe4c53pm.f[14]++;
-        cov_voe4c53pm.s[31]++;
+        cov_2mku5qsxy1.f[14]++;
+        cov_2mku5qsxy1.s[31]++;
 
         if (null == whenEntity) {
-          cov_voe4c53pm.b[2][0]++;
-          cov_voe4c53pm.s[32]++;
+          cov_2mku5qsxy1.b[2][0]++;
+          cov_2mku5qsxy1.s[32]++;
           resolve();
         } else {
-          cov_voe4c53pm.b[2][1]++;
-          cov_voe4c53pm.s[33]++;
+          cov_2mku5qsxy1.b[2][1]++;
+          cov_2mku5qsxy1.s[33]++;
 
           switch (whenEntity.constraintType) {
             case _taskPartConstraint.TASK_CONSTRAINT_TYPES.START:
-              cov_voe4c53pm.b[3][0]++;
-              cov_voe4c53pm.s[34]++;
+              cov_2mku5qsxy1.b[3][0]++;
+              cov_2mku5qsxy1.s[34]++;
               that.handleTaskPartWhenPartBegins(whenEntity).then(resolve);
-              cov_voe4c53pm.s[35]++;
+              cov_2mku5qsxy1.s[35]++;
               break;
 
             case _taskPartConstraint.TASK_CONSTRAINT_TYPES.END:
-              cov_voe4c53pm.b[3][1]++;
-              cov_voe4c53pm.s[36]++;
+              cov_2mku5qsxy1.b[3][1]++;
+              cov_2mku5qsxy1.s[36]++;
               that.handleTaskPartWhenPartEnds(whenEntity).then(resolve);
-              cov_voe4c53pm.s[37]++;
+              cov_2mku5qsxy1.s[37]++;
               break;
 
             case _taskPartConstraint.TASK_CONSTRAINT_TYPES.GROUP:
-              cov_voe4c53pm.b[3][2]++;
-              cov_voe4c53pm.s[38]++;
+              cov_2mku5qsxy1.b[3][2]++;
+              cov_2mku5qsxy1.s[38]++;
               that.handleTaskPartWhenPartGroup(whenEntity).then(resolve);
-              cov_voe4c53pm.s[39]++;
+              cov_2mku5qsxy1.s[39]++;
               break;
 
             case _taskPartConstraint.TASK_CONSTRAINT_TYPES.WAIT_FOR:
-              cov_voe4c53pm.b[3][3]++;
-              cov_voe4c53pm.s[40]++;
+              cov_2mku5qsxy1.b[3][3]++;
+              cov_2mku5qsxy1.s[40]++;
               that.handleTaskPartWhenWaitFor(whenEntity).then(resolve);
-              cov_voe4c53pm.s[41]++;
+              cov_2mku5qsxy1.s[41]++;
               break;
 
             default:
-              cov_voe4c53pm.b[3][4]++;
-              cov_voe4c53pm.s[42]++;
+              cov_2mku5qsxy1.b[3][4]++;
+              cov_2mku5qsxy1.s[42]++;
               reject(new Error('Unexpected when entity type.'));
           }
         }
@@ -4377,108 +4377,108 @@ function () {
   }, {
     key: "handleTaskPartWhenPartBegins",
     value: function handleTaskPartWhenPartBegins(whenEntity) {
-      cov_voe4c53pm.f[15]++;
-      var that = (cov_voe4c53pm.s[43]++, this);
-      cov_voe4c53pm.s[44]++;
+      cov_2mku5qsxy1.f[15]++;
+      var that = (cov_2mku5qsxy1.s[43]++, this);
+      cov_2mku5qsxy1.s[44]++;
       return new Promise(function (resolve, reject) {
-        cov_voe4c53pm.f[16]++;
-        cov_voe4c53pm.s[45]++;
+        cov_2mku5qsxy1.f[16]++;
+        cov_2mku5qsxy1.s[45]++;
 
         var eventHandler = function eventHandler() {
-          cov_voe4c53pm.f[17]++;
-          cov_voe4c53pm.s[46]++;
+          cov_2mku5qsxy1.f[17]++;
+          cov_2mku5qsxy1.s[46]++;
           that.partStartManager.unsubscribe(whenEntity.alias, token);
-          cov_voe4c53pm.s[47]++;
+          cov_2mku5qsxy1.s[47]++;
 
           if (null == whenEntity.after) {
-            cov_voe4c53pm.b[4][0]++;
-            cov_voe4c53pm.s[48]++;
+            cov_2mku5qsxy1.b[4][0]++;
+            cov_2mku5qsxy1.s[48]++;
             resolve();
           } else {
-            cov_voe4c53pm.b[4][1]++;
-            cov_voe4c53pm.s[49]++;
+            cov_2mku5qsxy1.b[4][1]++;
+            cov_2mku5qsxy1.s[49]++;
             that.handleTaskPartWhen(whenEntity.after).then(resolve);
           }
         };
 
-        var token = (cov_voe4c53pm.s[50]++, that.partStartManager.subscribe(whenEntity.alias, eventHandler));
+        var token = (cov_2mku5qsxy1.s[50]++, that.partStartManager.subscribe(whenEntity.alias, eventHandler));
       });
     }
   }, {
     key: "handleTaskPartWhenPartEnds",
     value: function handleTaskPartWhenPartEnds(whenEntity) {
-      cov_voe4c53pm.f[18]++;
-      var that = (cov_voe4c53pm.s[51]++, this);
-      cov_voe4c53pm.s[52]++;
+      cov_2mku5qsxy1.f[18]++;
+      var that = (cov_2mku5qsxy1.s[51]++, this);
+      cov_2mku5qsxy1.s[52]++;
       return new Promise(function (resolve, reject) {
-        cov_voe4c53pm.f[19]++;
-        cov_voe4c53pm.s[53]++;
+        cov_2mku5qsxy1.f[19]++;
+        cov_2mku5qsxy1.s[53]++;
 
         var eventHandler = function eventHandler() {
-          cov_voe4c53pm.f[20]++;
-          cov_voe4c53pm.s[54]++;
+          cov_2mku5qsxy1.f[20]++;
+          cov_2mku5qsxy1.s[54]++;
           that.partEndManager.unsubscribe(whenEntity.alias, token);
-          cov_voe4c53pm.s[55]++;
+          cov_2mku5qsxy1.s[55]++;
 
           if (null == whenEntity.after) {
-            cov_voe4c53pm.b[5][0]++;
-            cov_voe4c53pm.s[56]++;
+            cov_2mku5qsxy1.b[5][0]++;
+            cov_2mku5qsxy1.s[56]++;
             resolve();
           } else {
-            cov_voe4c53pm.b[5][1]++;
-            cov_voe4c53pm.s[57]++;
+            cov_2mku5qsxy1.b[5][1]++;
+            cov_2mku5qsxy1.s[57]++;
             that.handleTaskPartWhen(whenEntity.after).then(resolve);
           }
         };
 
-        var token = (cov_voe4c53pm.s[58]++, that.partEndManager.subscribe(whenEntity.alias, eventHandler));
+        var token = (cov_2mku5qsxy1.s[58]++, that.partEndManager.subscribe(whenEntity.alias, eventHandler));
       });
     }
   }, {
     key: "handleTaskPartWhenPartGroup",
     value: function handleTaskPartWhenPartGroup(whenEntity) {
-      cov_voe4c53pm.f[21]++;
-      var that = (cov_voe4c53pm.s[59]++, this);
-      cov_voe4c53pm.s[60]++;
+      cov_2mku5qsxy1.f[21]++;
+      var that = (cov_2mku5qsxy1.s[59]++, this);
+      cov_2mku5qsxy1.s[60]++;
       return new Promise(function (resolve, reject) {
-        cov_voe4c53pm.f[22]++;
-        var childPromises = (cov_voe4c53pm.s[61]++, new Array(whenEntity.constraints.length));
-        cov_voe4c53pm.s[62]++;
+        cov_2mku5qsxy1.f[22]++;
+        var childPromises = (cov_2mku5qsxy1.s[61]++, new Array(whenEntity.constraints.length));
+        cov_2mku5qsxy1.s[62]++;
 
         for (var i = 0; i < whenEntity.constraints.length; ++i) {
-          cov_voe4c53pm.s[63]++;
+          cov_2mku5qsxy1.s[63]++;
           childPromises[i] = new Promise(function (resolve, reject) {
-            cov_voe4c53pm.f[23]++;
-            cov_voe4c53pm.s[64]++;
+            cov_2mku5qsxy1.f[23]++;
+            cov_2mku5qsxy1.s[64]++;
             that.handleTaskPartWhen(whenEntity.constraints[i]).then(resolve);
           });
         }
 
-        cov_voe4c53pm.s[65]++;
+        cov_2mku5qsxy1.s[65]++;
 
         if (_taskPartWhenOperator.TaskPartWhenOperator.AND === whenEntity.operator) {
-          cov_voe4c53pm.b[6][0]++;
-          cov_voe4c53pm.s[66]++;
+          cov_2mku5qsxy1.b[6][0]++;
+          cov_2mku5qsxy1.s[66]++;
           Promise.all(childPromises).then(function () {
-            cov_voe4c53pm.f[24]++;
-            cov_voe4c53pm.s[67]++;
+            cov_2mku5qsxy1.f[24]++;
+            cov_2mku5qsxy1.s[67]++;
             resolve();
           });
         } else {
-          cov_voe4c53pm.b[6][1]++;
-          cov_voe4c53pm.s[68]++;
+          cov_2mku5qsxy1.b[6][1]++;
+          cov_2mku5qsxy1.s[68]++;
 
           if (_taskPartWhenOperator.TaskPartWhenOperator.OR === whenEntity.operator) {
-            cov_voe4c53pm.b[7][0]++;
-            cov_voe4c53pm.s[69]++;
+            cov_2mku5qsxy1.b[7][0]++;
+            cov_2mku5qsxy1.s[69]++;
             Promise.race(childPromises).then(function () {
-              cov_voe4c53pm.f[25]++;
-              cov_voe4c53pm.s[70]++;
+              cov_2mku5qsxy1.f[25]++;
+              cov_2mku5qsxy1.s[70]++;
               resolve();
             });
           } else {
-            cov_voe4c53pm.b[7][1]++;
-            cov_voe4c53pm.s[71]++;
+            cov_2mku5qsxy1.b[7][1]++;
+            cov_2mku5qsxy1.s[71]++;
             reject('Unexpected operator.');
           }
         }
@@ -4487,23 +4487,23 @@ function () {
   }, {
     key: "handleTaskPartWhenWaitFor",
     value: function handleTaskPartWhenWaitFor(whenEntity) {
-      cov_voe4c53pm.f[26]++;
-      var that = (cov_voe4c53pm.s[72]++, this);
-      cov_voe4c53pm.s[73]++;
+      cov_2mku5qsxy1.f[26]++;
+      var that = (cov_2mku5qsxy1.s[72]++, this);
+      cov_2mku5qsxy1.s[73]++;
       return new Promise(function (resolve, reject) {
-        cov_voe4c53pm.f[27]++;
-        cov_voe4c53pm.s[74]++;
+        cov_2mku5qsxy1.f[27]++;
+        cov_2mku5qsxy1.s[74]++;
         setTimeout(function () {
-          cov_voe4c53pm.f[28]++;
-          cov_voe4c53pm.s[75]++;
+          cov_2mku5qsxy1.f[28]++;
+          cov_2mku5qsxy1.s[75]++;
 
           if (whenEntity.after == null) {
-            cov_voe4c53pm.b[8][0]++;
-            cov_voe4c53pm.s[76]++;
+            cov_2mku5qsxy1.b[8][0]++;
+            cov_2mku5qsxy1.s[76]++;
             resolve();
           } else {
-            cov_voe4c53pm.b[8][1]++;
-            cov_voe4c53pm.s[77]++;
+            cov_2mku5qsxy1.b[8][1]++;
+            cov_2mku5qsxy1.s[77]++;
             that.handleTaskPartWhen(whenEntity.after).then(resolve);
           }
         }, whenEntity.millis);
@@ -4518,14 +4518,14 @@ exports.TaskEngine = TaskEngine;
 },{"./flow/task-part-constraint":5,"./operation/operation-manager":9,"./task-part-when-events":11,"./task-part-when-operator":12,"@babel/runtime/helpers/classCallCheck":20,"@babel/runtime/helpers/createClass":21,"@babel/runtime/helpers/interopRequireDefault":24,"events":28}],11:[function(require,module,exports){
 "use strict";
 
-var cov_1h9xaot06c = function () {
-  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/task/task-part-when-events.js",
-      hash = "8fef83dde1c978a72a721cdc42d1a5b96fba8e4c",
+var cov_1nelck99oy = function () {
+  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/task/task-part-when-events.js",
+      hash = "6c3407aa29e6d268d4580c468cbeec9717414975",
       Function = function () {}.constructor,
       global = new Function('return this')(),
       gcv = "__coverage__",
       coverageData = {
-    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/task/task-part-when-events.js",
+    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/task/task-part-when-events.js",
     statementMap: {
       "0": {
         start: {
@@ -4552,7 +4552,7 @@ var cov_1h9xaot06c = function () {
       mappings: "AAGA,MAAM,CAAC,MAAM,qBAAqB,GAAG;IAIjC,GAAG,EAAE,UAAU;IAIf,KAAK,EAAE,YAAY;CACtB,CAAC",
       file: "task-part-when-events.js",
       sourcesContent: ["/**\r\n * Prefixes used to ganerate alias for events over task parts.\r\n */\r\nexport const TASK_PART_WHEN_EVENTS = {\r\n    /**\r\n     * Prefix for any event raised once a task part is ended.\r\n     */\r\n    END: 'part.end',\r\n    /**\r\n     * Prefix for any event raised once a task part is started.\r\n     */\r\n    START: 'part.start',\r\n};\r\n"],
-      sourceRoot: "../../../../../src"
+      sourceRoot: "../../../../../../src"
     },
     _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184"
   },
@@ -4570,7 +4570,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.TASK_PART_WHEN_EVENTS = void 0;
-var TASK_PART_WHEN_EVENTS = (cov_1h9xaot06c.s[0]++, {
+var TASK_PART_WHEN_EVENTS = (cov_1nelck99oy.s[0]++, {
   END: 'part.end',
   START: 'part.start'
 });
@@ -4579,14 +4579,14 @@ exports.TASK_PART_WHEN_EVENTS = TASK_PART_WHEN_EVENTS;
 },{}],12:[function(require,module,exports){
 "use strict";
 
-var cov_2pppxfifo9 = function () {
-  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/task/task-part-when-operator.js",
-      hash = "d61133b244ebba61ac5c95fd958e91ce844cc2cf",
+var cov_mq54g3hju = function () {
+  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/task/task-part-when-operator.js",
+      hash = "2d69ba5b9dd0a0dff0be17f4d1e8f0f293f04ac1",
       Function = function () {}.constructor,
       global = new Function('return this')(),
       gcv = "__coverage__",
       coverageData = {
-    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/task/task-part-when-operator.js",
+    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/task/task-part-when-operator.js",
     statementMap: {
       "0": {
         start: {
@@ -4698,7 +4698,7 @@ var cov_2pppxfifo9 = function () {
       mappings: "AAGA,MAAM,CAAN,IAAY,oBASX;AATD,WAAY,oBAAoB;IAI5B,6DAAG,CAAA;IAIH,2DAAE,CAAA;AACN,CAAC,EATW,oBAAoB,KAApB,oBAAoB,QAS/B",
       file: "task-part-when-operator.js",
       sourcesContent: ["/**\r\n * Logical operator to apply.\r\n */\r\nexport enum TaskPartWhenOperator {\r\n    /**\r\n     * And operator.\r\n     */\r\n    AND,\r\n    /**\r\n     * Or operator.\r\n     */\r\n    OR,\r\n}\r\n"],
-      sourceRoot: "../../../../../src"
+      sourceRoot: "../../../../../../src"
     },
     _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184"
   },
@@ -4718,15 +4718,15 @@ Object.defineProperty(exports, "__esModule", {
 exports.TaskPartWhenOperator = void 0;
 var TaskPartWhenOperator;
 exports.TaskPartWhenOperator = TaskPartWhenOperator;
-cov_2pppxfifo9.s[0]++;
+cov_mq54g3hju.s[0]++;
 
 (function (TaskPartWhenOperator) {
-  cov_2pppxfifo9.f[0]++;
-  cov_2pppxfifo9.s[1]++;
+  cov_mq54g3hju.f[0]++;
+  cov_mq54g3hju.s[1]++;
   TaskPartWhenOperator[TaskPartWhenOperator["AND"] = 0] = "AND";
-  cov_2pppxfifo9.s[2]++;
+  cov_mq54g3hju.s[2]++;
   TaskPartWhenOperator[TaskPartWhenOperator["OR"] = 1] = "OR";
-})((cov_2pppxfifo9.b[0][0]++, TaskPartWhenOperator) || (cov_2pppxfifo9.b[0][1]++, exports.TaskPartWhenOperator = TaskPartWhenOperator = {}));
+})((cov_mq54g3hju.b[0][0]++, TaskPartWhenOperator) || (cov_mq54g3hju.b[0][1]++, exports.TaskPartWhenOperator = TaskPartWhenOperator = {}));
 
 },{}],13:[function(require,module,exports){
 "use strict";
@@ -4884,14 +4884,14 @@ exports.TokenMapTests = TokenMapTests;
 },{"../../collection/token-map":1,"@babel/runtime/helpers/classCallCheck":20,"@babel/runtime/helpers/createClass":21,"@babel/runtime/helpers/interopRequireDefault":24}],14:[function(require,module,exports){
 "use strict";
 
-var cov_yhsarlch5 = function () {
-  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/test/logic/flow/log-message-task-flow-part.js",
-      hash = "8bc96439fb5998ac0cd4fd03f9fe9e5f24235ad6",
+var cov_75dqqe25e = function () {
+  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/test/logic/flow/log-message-task-flow-part.js",
+      hash = "59f043943b620215ed0050de7c7844c63754d391",
       Function = function () {}.constructor,
       global = new Function('return this')(),
       gcv = "__coverage__",
       coverageData = {
-    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/test/logic/flow/log-message-task-flow-part.js",
+    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/test/logic/flow/log-message-task-flow-part.js",
     statementMap: {
       "0": {
         start: {
@@ -5030,7 +5030,7 @@ var cov_yhsarlch5 = function () {
       mappings: "AAGA,MAAM,OAAO,sBAAsB;IA0B/B,YACI,KAAa,EACb,OAAe,EACf,iBAAyC,IAAI,EAC7C,OAAgC,IAAI;QAEpC,IAAI,CAAC,KAAK,GAAG,KAAK,CAAC;QACnB,IAAI,CAAC,OAAO,GAAG,OAAO,CAAC;QACvB,IAAI,CAAC,cAAc,GAAG,cAAc,CAAC;QACrC,IAAI,CAAC,IAAI,GAAG,IAAI,CAAC;IACrB,CAAC;CACJ",
       file: "log-message-task-flow-part.js",
       sourcesContent: ["import { ITaskFlowPart } from '../../../task/flow/task-flow-part';\nimport { ITaskPartWhenConstraint } from '../../../task/flow/task-flow-when';\n\nexport class LogMessageTaskFlowPart implements ITaskFlowPart {\n    /**\n     * Alias of the part\n     */\n    public alias: string;\n    /**\n     * Message to log.\n     */\n    public message: string;\n    /**\n     * The message won't be log until the promise is fullfilled.\n     */\n    public waitForPromise: PromiseLike<{} | void>;\n    /**\n     * Constraints to ensure before applying the styles.\n     */\n    public when: ITaskPartWhenConstraint;\n\n    /**\n     * Creates a new instance of this class.\n     *\n     * @param alias alias of the part.\n     * @param message message to log.\n     * @param waitForPromise Promise that must be fullfilled before loging the message.\n     * @param when When constraint of the task.\n     */\n    public constructor(\n        alias: string,\n        message: string,\n        waitForPromise: PromiseLike<{} | void> = null,\n        when: ITaskPartWhenConstraint = null,\n    ) {\n        this.alias = alias;\n        this.message = message;\n        this.waitForPromise = waitForPromise;\n        this.when = when;\n    }\n}\n"],
-      sourceRoot: "../../../../../../../src"
+      sourceRoot: "../../../../../../../../src"
     },
     _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184"
   },
@@ -5054,17 +5054,17 @@ exports.LogMessageTaskFlowPart = void 0;
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
 var LogMessageTaskFlowPart = function LogMessageTaskFlowPart(alias, message) {
-  var waitForPromise = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : (cov_yhsarlch5.b[0][0]++, null);
-  var when = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : (cov_yhsarlch5.b[1][0]++, null);
+  var waitForPromise = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : (cov_75dqqe25e.b[0][0]++, null);
+  var when = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : (cov_75dqqe25e.b[1][0]++, null);
   (0, _classCallCheck2.default)(this, LogMessageTaskFlowPart);
-  cov_yhsarlch5.f[0]++;
-  cov_yhsarlch5.s[0]++;
+  cov_75dqqe25e.f[0]++;
+  cov_75dqqe25e.s[0]++;
   this.alias = alias;
-  cov_yhsarlch5.s[1]++;
+  cov_75dqqe25e.s[1]++;
   this.message = message;
-  cov_yhsarlch5.s[2]++;
+  cov_75dqqe25e.s[2]++;
   this.waitForPromise = waitForPromise;
-  cov_yhsarlch5.s[3]++;
+  cov_75dqqe25e.s[3]++;
   this.when = when;
 };
 
@@ -5073,14 +5073,14 @@ exports.LogMessageTaskFlowPart = LogMessageTaskFlowPart;
 },{"@babel/runtime/helpers/classCallCheck":20,"@babel/runtime/helpers/interopRequireDefault":24}],15:[function(require,module,exports){
 "use strict";
 
-var cov_1pibcsdynx = function () {
-  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/test/logic/log-task-engine.js",
-      hash = "375053d3b1f801ad907b00f757000db6af416347",
+var cov_11x5vv3fe5 = function () {
+  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/test/logic/log-task-engine.js",
+      hash = "522f83eea24bdcdacc3ccb9f0ff1619ee85921a9",
       Function = function () {}.constructor,
       global = new Function('return this')(),
       gcv = "__coverage__",
       coverageData = {
-    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/test/logic/log-task-engine.js",
+    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/test/logic/log-task-engine.js",
     statementMap: {
       "0": {
         start: {
@@ -5461,7 +5461,7 @@ var cov_1pibcsdynx = function () {
       mappings: "AAAA,OAAO,EAAE,UAAU,EAAE,MAAM,wBAAwB,CAAC;AAEpD,OAAO,EAAE,SAAS,EAAE,MAAM,cAAc,CAAC;AAEzC,MAAM,OAAO,aAAc,SAAQ,UAAkC;IAWjE,YAAmB,MAAiB,IAAI;QACpC,KAAK,EAAE,CAAC;QAER,IAAI,IAAI,IAAI,GAAG,EAAE;YACb,GAAG,GAAG,IAAI,SAAS,EAAE,CAAC;SACzB;QAED,IAAI,CAAC,GAAG,GAAG,GAAG,CAAC;IACnB,CAAC;IAKM,MAAM;QACT,OAAO,IAAI,CAAC,GAAG,CAAC;IACpB,CAAC;IAMS,WAAW,CACjB,IAA4B;QAE5B,MAAM,IAAI,GAAG,IAAI,CAAC;QAClB,OAAO,IAAI,OAAO,CAAC,CAAC,OAAO,EAAE,MAAM,EAAE,EAAE;YACnC,MAAM,SAAS,GAAG,GAAG,EAAE;gBACnB,IAAI,CAAC,GAAG,CAAC,UAAU,CAAC,IAAI,CAAC,OAAO,CAAC,CAAC;gBAClC,OAAO,EAAE,CAAC;YACd,CAAC,CAAC;YACF,IAAI,IAAI,IAAI,IAAI,CAAC,cAAc,EAAE;gBAC7B,SAAS,EAAE,CAAC;aACf;iBAAM;gBACH,IAAI,CAAC,cAAc,CAAC,IAAI,CAAC,SAAS,CAAC,CAAC;aACvC;QACL,CAAC,CAAC,CAAC;IACP,CAAC;CACJ",
       file: "log-task-engine.js",
       sourcesContent: ["import { TaskEngine } from '../../task/task-engine';\nimport { LogMessageTaskFlowPart } from './flow/log-message-task-flow-part';\nimport { SampleLog } from './sample-log';\n\nexport class LogTaskEngine extends TaskEngine<LogMessageTaskFlowPart> {\n\n    /**\n     * Engine's log used to store messages.\n     */\n    protected log: SampleLog;\n\n    /**\n     * Creates a new engine.\n     * @param log Engine's log. If null is passed, the engine will create a new log.\n     */\n    public constructor(log: SampleLog = null) {\n        super();\n\n        if (null == log) {\n            log = new SampleLog();\n        }\n\n        this.log = log;\n    }\n\n    /**\n     * Obtains the engine's log.\n     */\n    public getLog(): SampleLog {\n        return this.log;\n    }\n\n    /**\n     * Performs a task flow part.\n     * @param part Task flow part.\n     */\n    protected performTask(\n        part: LogMessageTaskFlowPart,\n    ): PromiseLike<{} | void> {\n        const that = this;\n        return new Promise((resolve, reject) => {\n            const logAction = () => {\n                that.log.logMessage(part.message);\n                resolve();\n            };\n            if (null == part.waitForPromise) {\n                logAction();\n            } else {\n                part.waitForPromise.then(logAction);\n            }\n        });\n    }\n}\n"],
-      sourceRoot: "../../../../../../src"
+      sourceRoot: "../../../../../../../src"
     },
     _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184"
   },
@@ -5504,22 +5504,22 @@ function (_TaskEngine) {
   function LogTaskEngine() {
     var _this;
 
-    var log = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : (cov_1pibcsdynx.b[0][0]++, null);
+    var log = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : (cov_11x5vv3fe5.b[0][0]++, null);
     (0, _classCallCheck2.default)(this, LogTaskEngine);
-    cov_1pibcsdynx.f[0]++;
-    cov_1pibcsdynx.s[0]++;
+    cov_11x5vv3fe5.f[0]++;
+    cov_11x5vv3fe5.s[0]++;
     _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(LogTaskEngine).call(this));
-    cov_1pibcsdynx.s[1]++;
+    cov_11x5vv3fe5.s[1]++;
 
     if (null == log) {
-      cov_1pibcsdynx.b[1][0]++;
-      cov_1pibcsdynx.s[2]++;
+      cov_11x5vv3fe5.b[1][0]++;
+      cov_11x5vv3fe5.s[2]++;
       log = new _sampleLog.SampleLog();
     } else {
-      cov_1pibcsdynx.b[1][1]++;
+      cov_11x5vv3fe5.b[1][1]++;
     }
 
-    cov_1pibcsdynx.s[3]++;
+    cov_11x5vv3fe5.s[3]++;
     _this.log = log;
     return _this;
   }
@@ -5527,37 +5527,37 @@ function (_TaskEngine) {
   (0, _createClass2.default)(LogTaskEngine, [{
     key: "getLog",
     value: function getLog() {
-      cov_1pibcsdynx.f[1]++;
-      cov_1pibcsdynx.s[4]++;
+      cov_11x5vv3fe5.f[1]++;
+      cov_11x5vv3fe5.s[4]++;
       return this.log;
     }
   }, {
     key: "performTask",
     value: function performTask(part) {
-      cov_1pibcsdynx.f[2]++;
-      var that = (cov_1pibcsdynx.s[5]++, this);
-      cov_1pibcsdynx.s[6]++;
+      cov_11x5vv3fe5.f[2]++;
+      var that = (cov_11x5vv3fe5.s[5]++, this);
+      cov_11x5vv3fe5.s[6]++;
       return new Promise(function (resolve, reject) {
-        cov_1pibcsdynx.f[3]++;
-        cov_1pibcsdynx.s[7]++;
+        cov_11x5vv3fe5.f[3]++;
+        cov_11x5vv3fe5.s[7]++;
 
         var logAction = function logAction() {
-          cov_1pibcsdynx.f[4]++;
-          cov_1pibcsdynx.s[8]++;
+          cov_11x5vv3fe5.f[4]++;
+          cov_11x5vv3fe5.s[8]++;
           that.log.logMessage(part.message);
-          cov_1pibcsdynx.s[9]++;
+          cov_11x5vv3fe5.s[9]++;
           resolve();
         };
 
-        cov_1pibcsdynx.s[10]++;
+        cov_11x5vv3fe5.s[10]++;
 
         if (null == part.waitForPromise) {
-          cov_1pibcsdynx.b[2][0]++;
-          cov_1pibcsdynx.s[11]++;
+          cov_11x5vv3fe5.b[2][0]++;
+          cov_11x5vv3fe5.s[11]++;
           logAction();
         } else {
-          cov_1pibcsdynx.b[2][1]++;
-          cov_1pibcsdynx.s[12]++;
+          cov_11x5vv3fe5.b[2][1]++;
+          cov_11x5vv3fe5.s[12]++;
           part.waitForPromise.then(logAction);
         }
       });
@@ -5571,14 +5571,14 @@ exports.LogTaskEngine = LogTaskEngine;
 },{"../../task/task-engine":10,"./sample-log":16,"@babel/runtime/helpers/classCallCheck":20,"@babel/runtime/helpers/createClass":21,"@babel/runtime/helpers/getPrototypeOf":22,"@babel/runtime/helpers/inherits":23,"@babel/runtime/helpers/interopRequireDefault":24,"@babel/runtime/helpers/possibleConstructorReturn":25}],16:[function(require,module,exports){
 "use strict";
 
-var cov_1ystm84odk = function () {
-  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/test/logic/sample-log.js",
-      hash = "fe49b097864f5c792e189471839e396b88a53117",
+var cov_273b4xcdor = function () {
+  var path = "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/test/logic/sample-log.js",
+      hash = "b750f464784a41b09a7a0204989a96912d4bbdab",
       Function = function () {}.constructor,
       global = new Function('return this')(),
       gcv = "__coverage__",
       coverageData = {
-    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/src/test/logic/sample-log.js",
+    path: "/Users/robertopintoslopez/Documents/Repositorios/jovellanos/dist/js/module/es6/src/test/logic/sample-log.js",
     statementMap: {
       "0": {
         start: {
@@ -5853,7 +5853,7 @@ var cov_1ystm84odk = function () {
       mappings: "AAAA,MAAM,OAAO,SAAS;IAoBlB;QACI,IAAI,CAAC,UAAU,GAAG,CAAC,CAAC;QACpB,IAAI,CAAC,YAAY,GAAG,IAAI,KAAK,EAAE,CAAC;QAChC,IAAI,CAAC,cAAc,GAAG,EAAE,CAAC;IAC7B,CAAC;IAMM,UAAU,CAAC,OAAe;QAC7B,IAAI,CAAC,YAAY,CAAC,IAAI,CAAC,OAAO,CAAC,CAAC;QAChC,IAAI,CAAC,cAAc,CAAC,OAAO,CAAC,GAAG,IAAI,CAAC,UAAU,CAAC;QAC/C,EAAE,IAAI,CAAC,UAAU,CAAC;IACtB,CAAC;IAMM,UAAU,CAAC,KAAa;QAC3B,OAAO,IAAI,CAAC,YAAY,CAAC,KAAK,CAAC,CAAC;IACpC,CAAC;IAMM,eAAe,CAAC,OAAe;QAClC,OAAO,IAAI,CAAC,cAAc,CAAC,OAAO,CAAC,CAAC;IACxC,CAAC;IAMM,WAAW;QACd,MAAM,YAAY,GAAG,IAAI,KAAK,EAAE,CAAC;QACjC,KAAK,MAAM,OAAO,IAAI,IAAI,CAAC,YAAY,EAAE;YACrC,YAAY,CAAC,IAAI,CAAC,OAAO,CAAC,CAAC;SAC9B;QACD,OAAO,YAAY,CAAC;IACxB,CAAC;CACJ",
       file: "sample-log.js",
       sourcesContent: ["export class SampleLog {\n\n    /**\n     * Log counter. The log has as many entries as the value of this counter.\n     */\n    protected logCounter: number;\n\n    /**\n     * Messages array\n     */\n    protected messageArray: string[];\n\n    /**\n     * Messages indexes.\n     */\n    protected messageIndexes: {[key: string]: number};\n\n    /**\n     * Creates a new sample log.\n     */\n    public constructor() {\n        this.logCounter = 0;\n        this.messageArray = new Array();\n        this.messageIndexes = {};\n    }\n\n    /**\n     * Logs a message.\n     * @param message Message to be logged.\n     */\n    public logMessage(message: string) {\n        this.messageArray.push(message);\n        this.messageIndexes[message] = this.logCounter;\n        ++this.logCounter;\n    }\n\n    /**\n     * Returns the message at the specified index.\n     * @param index index of the message.\n     */\n    public getMessage(index: number): string {\n        return this.messageArray[index];\n    }\n\n    /**\n     * Returns the index of a message.\n     * @param message Message whose index is searched.\n     */\n    public getMessageIndex(message: string): number {\n        return this.messageIndexes[message];\n    }\n\n    /**\n     * Returns a copy of the messages in the log.\n     * @returns Log array.\n     */\n    public getMessages(): string[] {\n        const messagesCopy = new Array();\n        for (const message of this.messageArray) {\n            messagesCopy.push(message);\n        }\n        return messagesCopy;\n    }\n}\n"],
-      sourceRoot: "../../../../../../src"
+      sourceRoot: "../../../../../../../src"
     },
     _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184"
   },
@@ -5883,46 +5883,46 @@ var SampleLog =
 function () {
   function SampleLog() {
     (0, _classCallCheck2.default)(this, SampleLog);
-    cov_1ystm84odk.f[0]++;
-    cov_1ystm84odk.s[0]++;
+    cov_273b4xcdor.f[0]++;
+    cov_273b4xcdor.s[0]++;
     this.logCounter = 0;
-    cov_1ystm84odk.s[1]++;
+    cov_273b4xcdor.s[1]++;
     this.messageArray = new Array();
-    cov_1ystm84odk.s[2]++;
+    cov_273b4xcdor.s[2]++;
     this.messageIndexes = {};
   }
 
   (0, _createClass2.default)(SampleLog, [{
     key: "logMessage",
     value: function logMessage(message) {
-      cov_1ystm84odk.f[1]++;
-      cov_1ystm84odk.s[3]++;
+      cov_273b4xcdor.f[1]++;
+      cov_273b4xcdor.s[3]++;
       this.messageArray.push(message);
-      cov_1ystm84odk.s[4]++;
+      cov_273b4xcdor.s[4]++;
       this.messageIndexes[message] = this.logCounter;
-      cov_1ystm84odk.s[5]++;
+      cov_273b4xcdor.s[5]++;
       ++this.logCounter;
     }
   }, {
     key: "getMessage",
     value: function getMessage(index) {
-      cov_1ystm84odk.f[2]++;
-      cov_1ystm84odk.s[6]++;
+      cov_273b4xcdor.f[2]++;
+      cov_273b4xcdor.s[6]++;
       return this.messageArray[index];
     }
   }, {
     key: "getMessageIndex",
     value: function getMessageIndex(message) {
-      cov_1ystm84odk.f[3]++;
-      cov_1ystm84odk.s[7]++;
+      cov_273b4xcdor.f[3]++;
+      cov_273b4xcdor.s[7]++;
       return this.messageIndexes[message];
     }
   }, {
     key: "getMessages",
     value: function getMessages() {
-      cov_1ystm84odk.f[4]++;
-      var messagesCopy = (cov_1ystm84odk.s[8]++, new Array());
-      cov_1ystm84odk.s[9]++;
+      cov_273b4xcdor.f[4]++;
+      var messagesCopy = (cov_273b4xcdor.s[8]++, new Array());
+      cov_273b4xcdor.s[9]++;
       var _iteratorNormalCompletion = true;
       var _didIteratorError = false;
       var _iteratorError = undefined;
@@ -5930,7 +5930,7 @@ function () {
       try {
         for (var _iterator = this.messageArray[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
           var message = _step.value;
-          cov_1ystm84odk.s[10]++;
+          cov_273b4xcdor.s[10]++;
           messagesCopy.push(message);
         }
       } catch (err) {
@@ -5948,7 +5948,7 @@ function () {
         }
       }
 
-      cov_1ystm84odk.s[11]++;
+      cov_273b4xcdor.s[11]++;
       return messagesCopy;
     }
   }]);
