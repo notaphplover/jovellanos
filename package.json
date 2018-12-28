@@ -2,7 +2,7 @@
   "name": "jovellanos",
   "version": "1.0.3",
   "description": "Asyncronous task engine.",
-  "main": "dist/js/module/main.js",
+  "main": "dist/js/module/commonjs/main.js",
   "scripts": {
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
     "test": "node_modules/nyc/bin/nyc.js --reporter=lcov node ./node_modules/jasmine/bin/jasmine.js ./dist/js/bundle/bundle.test.js"
@@ -44,7 +44,5 @@
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
   },
-  "dependencies": {
-    "core-js": "^2.6.0"
-  }
+  "dependencies": {}
 }

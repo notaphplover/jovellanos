@@ -1,5 +1,3 @@
-require('core-js/fn/promise');
-
 import { TaskPartBeginConstraint } from './task/flow/task-part-begin-constraint';
 import { TaskPartEndConstraint } from './task/flow/task-part-end-constraint';
 import { TaskGroupConstraint } from './task/flow/task-part-group-constraint';
