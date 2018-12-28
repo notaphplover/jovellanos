@@ -57,6 +57,8 @@ const TASKS = {
     BUNDLE_PROD: 'bundle-prod',
     BUNDLE_TEST: 'bundle-test',
     COMPILE_TYPESCRIPT_SRC: 'compile-typescript-src',
+    COMPILE_TYPESCRIPT_COMMONJS: 'compile-typescript-commonjs',
+    COMPILE_TYPESCRIPT_ES6: 'compile-typescript-es6',
     DEFAULT: 'default',
     DOCS: 'typedoc',
     TEST: 'test',
@@ -67,10 +69,10 @@ const TASKS = {
 var OPTIONS = {};
 
 OPTIONS[TASKS.BUNDLE_DEV] = {
-    BROWSERIFY_ENTRY: 'dist/js/module/src/main.js',
+    BROWSERIFY_ENTRY: 'dist/js/module/es6/src/main.js',
     BUNDLE_NAME: 'bundle.dev.js',
     DESTINATION_FOLDER: 'dist/js/bundle',
-    MODULE_NAME: 'sora',
+    MODULE_NAME: 'jovellanos',
 };
 
 OPTIONS[TASKS.BUNDLE_PROD] = {
@@ -81,19 +83,20 @@ OPTIONS[TASKS.BUNDLE_PROD] = {
 };
 
 OPTIONS[TASKS.BUNDLE_TEST] = {
-    BROWSERIFY_ENTRY: 'dist/js/module/src/main.test.js',
+    BROWSERIFY_ENTRY: 'dist/js/module/es6/src/main.test.js',
     BUNDLE_NAME: 'bundle.test.js',
     DESTINATION_FOLDER: OPTIONS[TASKS.BUNDLE_DEV].DESTINATION_FOLDER,
-    MODULE_NAME: 'soraTest',
+    MODULE_NAME: 'jovellanosTest',
 };
 
-OPTIONS[TASKS.COMPILE_TYPESCRIPT_SRC] = {
-    CONFIG_FILE: 'src.tsconfig.json',
-    TEMP_FOLDER: 'dist/js/module/src',
+OPTIONS[TASKS.COMPILE_TYPESCRIPT_COMMONJS] = {
+    CONFIG_FILE: 'src.tsconfig.commonjs.json',
+    TEMP_FOLDER: 'dist/js/module/commonjs/src',
 };
 
-OPTIONS[TASKS.TEST] = {
-    PAGE_LOCATION: 'file:///' + __dirname + '/src/test/runner/test-runner.html',
+OPTIONS[TASKS.COMPILE_TYPESCRIPT_ES6] = {
+    CONFIG_FILE: 'src.tsconfig.es6.json',
+    TEMP_FOLDER: 'dist/js/module/es6/src',
 };
 
 //#endregion
@@ -158,10 +161,10 @@ function bundleTest() {
         .pipe(gulp.dest('./'));
 }
 
-gulp.task(TASKS.COMPILE_TYPESCRIPT_SRC, function () {
+gulp.task(TASKS.COMPILE_TYPESCRIPT_COMMONJS, function () {
     const tsProjectSrc = ts
         .createProject(
-            OPTIONS[TASKS.COMPILE_TYPESCRIPT_SRC].CONFIG_FILE,
+            OPTIONS[TASKS.COMPILE_TYPESCRIPT_COMMONJS].CONFIG_FILE,
             { noResolve: true }
         );
 
@@ -179,16 +182,56 @@ gulp.task(TASKS.COMPILE_TYPESCRIPT_SRC, function () {
                     {
                         debug: false,
                         includeContent: true,
-                        sourceRoot: '../../../../src'
+                        sourceRoot: '../../../../../src'
                     }
                 )
             )
-            .pipe(gulp.dest(OPTIONS[TASKS.COMPILE_TYPESCRIPT_SRC].TEMP_FOLDER)),
+            .pipe(gulp.dest(OPTIONS[TASKS.COMPILE_TYPESCRIPT_COMMONJS].TEMP_FOLDER)),
         tsResult
             .dts
-            .pipe(gulp.dest(OPTIONS[TASKS.COMPILE_TYPESCRIPT_SRC].TEMP_FOLDER)),
+            .pipe(gulp.dest(OPTIONS[TASKS.COMPILE_TYPESCRIPT_COMMONJS].TEMP_FOLDER)),
     ]);
 });
+
+gulp.task(TASKS.COMPILE_TYPESCRIPT_ES6, function () {
+    const tsProjectSrc = ts
+        .createProject(
+            OPTIONS[TASKS.COMPILE_TYPESCRIPT_ES6].CONFIG_FILE,
+            { noResolve: true }
+        );
+
+    const tsResult = tsProjectSrc
+        .src()
+        .pipe(sourcemaps.init())
+        .pipe(tsProjectSrc());
+
+    return merge2([
+        tsResult
+            .js
+            .pipe(
+                sourcemaps.write(
+                    '',
+                    {
+                        debug: false,
+                        includeContent: true,
+                        sourceRoot: '../../../../../src'
+                    }
+                )
+            )
+            .pipe(gulp.dest(OPTIONS[TASKS.COMPILE_TYPESCRIPT_ES6].TEMP_FOLDER)),
+        tsResult
+            .dts
+            .pipe(gulp.dest(OPTIONS[TASKS.COMPILE_TYPESCRIPT_ES6].TEMP_FOLDER)),
+    ]);
+});
+
+gulp.task(
+    TASKS.COMPILE_TYPESCRIPT_SRC,
+    gulp.parallel(
+        TASKS.COMPILE_TYPESCRIPT_COMMONJS,
+        TASKS.COMPILE_TYPESCRIPT_ES6,
+    )
+);
 
 gulp.task(
     TASKS.BUILD,
