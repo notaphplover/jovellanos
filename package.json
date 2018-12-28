@@ -1,6 +1,6 @@
 {
   "name": "jovellanos",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Asyncronous task engine.",
   "main": "dist/js/module/commonjs/main.js",
   "scripts": {
